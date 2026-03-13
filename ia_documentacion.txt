@@ -1,0 +1,45 @@
+Uso de IA — Documentación
+
+Inicié con una versión básica de un index.html y styles.css donde definí el header, la barra lataeral 
+con nav y ul, la sección principal del chat y el formulario del footer.
+
+Ya luego con gpt completé y corregí todo lo demás.
+
+------------------------------------------------
+
+Prompt 1:
+
+"Tengo un layout con sidebar y chat pero no se acomodan bien.
+Quiero que el sidebar quede a la izquierda y el chat ocupe lo demás.
+
+Estoy usando flex pero no sé qué me falta."
+
+Respuesta:
+
+La IA sugirió asegurar que el contenedor principal tenga display:flex
+y darle un ancho fijo al sidebar para que el chat pueda ocupar el resto.
+
+Cambios realizados:
+
+Le puso un tamaño fijo al sidebar con width y dejé que el chat usara flex:1, es decir el resto.
+
+
+------------------------------------------------
+
+Prompt 2:
+
+"Los mensajes de mi chat ocupan todo el ancho y se ve raro.
+Quiero que se vean como burbujas tipo chat y que el usuario quede a la derecha
+y el asistente a la izquierda."
+
+Respuesta:
+
+Se recomendó limitar el ancho de los mensajes y usar align-self para
+alinearlos dependiendo de la clase.
+
+Cambios realizados:
+
+Agregó max-width de 60% a los mensajes y clases separadas para usuario
+y asistente.
+
+
