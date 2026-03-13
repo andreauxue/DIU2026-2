@@ -1,0 +1,111 @@
+Prompt:Dame una serie de mensajes para poner en esta parte, que sea sobre html o css
+<article class="usuario">
+            </article>
+
+            <article class="asistente">
+            </article>
+
+            <article class="usuario">
+            </article>
+
+            <article class="asistente">
+            </article>
+
+            <article class="usuario">
+            </article>
+
+            <article class="asistente">
+            </article>
+
+Resultado:
+Sí, aquí tienes una conversación sencilla sobre HTML y CSS para pegar dentro de esos article:
+
+<article class="usuario">
+    <p>Estoy retomando HTML y CSS, pero no recuerdo bien cuál es la diferencia entre ambos.</p>
+</article>
+
+<article class="asistente">
+    <p>HTML se usa para definir la estructura del contenido, mientras que CSS sirve para darle estilo, como colores, tamaños, márgenes y distribución en la página.</p>
+</article>
+
+<article class="usuario">
+    <p>Entonces, si quiero poner un título y un párrafo, eso va en HTML, ¿verdad?</p>
+</article>
+
+<article class="asistente">
+    <p>Exacto. Por ejemplo, usarías etiquetas como h1 para el título y p para el párrafo. Después, con CSS, puedes cambiar su color, fuente y alineación.</p>
+</article>
+
+<article class="usuario">
+    <p>¿Y cómo hago para que dos secciones aparezcan una al lado de la otra, como un menú y un chat?</p>
+</article>
+
+<article class="asistente">
+    <p>Puedes lograrlo con Flexbox en CSS. Solo necesitas convertir el contenedor principal en un elemento flexible usando display: flex; para acomodar las secciones en fila.</p>
+</article>
+
+Cambios:
+<article class="usuario">
+    <p>Estoy retomando HTML y CSS, pero no recuerdo bien cuál es la diferencia entre ambos.</p>
+</article>
+
+<article class="asistente">
+    <p>HTML se usa para definir la estructura del contenido, mientras que CSS sirve para darle estilo, como colores, tamaños, márgenes y distribución en la página.</p>
+</article>
+
+<article class="usuario">
+    <p>Entonces, si quiero poner un título y un párrafo, eso va en HTML, ¿verdad?</p>
+</article>
+
+<article class="asistente">
+    <p>Exacto. Por ejemplo, usarías etiquetas como h1 para el título y p para el párrafo. Después, con CSS, puedes cambiar su color, fuente y alineación.</p>
+</article>
+
+<article class="usuario">
+    <p>¿Y cómo hago para que dos secciones aparezcan una al lado de la otra, como un menú y un chat?</p>
+</article>
+
+<article class="asistente">
+    <p>Puedes lograrlo con Flexbox en CSS. Solo necesitas convertir el contenedor principal en un elemento flexible usando display: flex; para acomodar las secciones en fila.</p>
+</article>
+
+
+Prompt:
+como modifico el color del texto de cada <li>: <section class="sidebar"> <nav> <ul> <li>Conversación sobre HTML</li> <li>Conversación sobre CSS</li> <li>Conversación sobre IA</li> </ul> </nav> </section>
+
+Resultado:
+.sidebar li {
+    color: blue;
+}
+
+Cambios:
+.sidebar li {
+    color: white;
+    background-color: rgba(152, 8, 8, 0.81);
+}
+
+
+Prompt: puedes ayudarme usar flexbox en .chat 
+
+Resultado:
+/* chat */
+.chat {
+    width: 65%;
+    padding: 20px;
+
+    display: flex;              
+    flex-direction: column;    
+    gap: 10px;                 
+}
+
+Cambios:
+/* chat */
+.chat {
+    width: 65%;
+    padding: 20px;
+
+    display: flex;              /* flexbox */
+    flex-direction: column;     /* mensajes uno debajo de otro */
+    gap: 10px;                  /* espacio entre mensajes */
+}
+
