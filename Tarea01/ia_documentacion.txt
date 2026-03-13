@@ -1,0 +1,8 @@
+Prompt utilizado:
+Genera una interfaz básica de chat usando HTML y CSS con header, sidebar, chat y footer.
+
+Resultado generado:
+Código base para index.html y styles.css.
+
+Cambios realizados:
+Se modificaron los mensajes del chat y los colores del diseño.
