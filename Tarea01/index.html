@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Este es para decirle al navegador que la página está en español, util para los que tienen discapacidades visuales al usar el modo de audio, asi el navegador sabe que es español y da por ejemplo la voz de narración -->
+<head>
+    <meta charset="UTF-8"> <!-- Como decian en la clase, sin esto, acentos o así cambiaran si no lo usamos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistent</title> 
+    <link rel="stylesheet" href="styles.css"> <!-- conectamos con el css -->
+</head>
+<body>
+    <header> <!-- cabecera de la página -->
+        <h1>DIUI Assistent</h1>
+        <p>Asistente virtual para diseño de interfaces</p>
+    </header>
+    
+    <main> <!-- Este es para el contenido principal, adentro van el nav y el chat -->
+        <nav> <!-- Nos sirve para la barra lateral de navegación -->
+            <ul> <!--lista de conversaciones -->
+                <li>Chat sobre formularios</li>  
+                <li>Chat sobre accesibilidad</li>               
+                <li>Chat sobre UX</li>
+            </ul>
+        </nav>
+        
+        <section class="chat"> <!-- agrupamos los mensajes del chat -->
+            <article class="mensaje usuario">¿Cómo mejorar un formulario?</article>
+            <article class="mensaje asistente">Para mejorar un formulario puedes utilizar el famoso 60%, 30% y 10%, lo vi en un tiktok xd</article>
+
+            <article class="mensaje usuario">¿Qué es HTML semántico?</article>
+            <article class="mensaje asistente">Es tener un HTML con formato estructurado</article>
+
+            <article class="mensaje usuario">¿Por qué usar label en los formularios?</article>
+            <article class="mensaje asistente">Porque es para un input accesible y amplía el área clicable.</article>
+        </section>
+    </main>
+    
+    <footer> <!-- Este es para la barra de abajo donde se escribe el mensaje -->
+        <div class="footer-spacer"></div> <!--alinea el formulario con el chat -->
+        <div class="footer-content">
+          <form> <!-- ACa agrupamos el input y el botón de enviar -->
+            <label for="mensaje">Escribe tu mensaje:</label> <!-- en esta parte vincula el texto con el input -->
+            <input type="text" id="mensaje" placeholder="Escribe tu mensaje..." />
+            <button type="submit" aria-label="Enviar mensaje">Enviar</button> <!-- aria-label es para lectores de pantalla -->
+          </form>
+        </div>
+    </footer>
+</body>
+</html>
