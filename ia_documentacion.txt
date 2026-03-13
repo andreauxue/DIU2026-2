@@ -1,0 +1,4 @@
+Utilice IA para:
+
+-Comprender los archivos de la clase-01-html y clase-02-css
+-Resolver dudas sobre elementos como aside

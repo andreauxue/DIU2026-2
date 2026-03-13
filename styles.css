@@ -1,0 +1,124 @@
+/* Reset básico */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Tipografía  */
+body{
+    font-family: 'Montserrat', Arial, sans-serif;
+    background:#f7f2f6;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+header{
+    background:#222;
+    color:rgb(252, 228, 245);
+    padding:15px;
+    text-align:center;
+}
+
+/* Layout principal */
+main{
+    display:flex;
+    flex:1;
+}
+
+/* Sidebar / conversaciones */
+aside{
+    width:250px;
+    background:#fdf0f9;
+    padding:15px;
+    border-right:1px solid #fad4ea;
+}
+
+aside h2{
+    margin-bottom:10px;
+}
+
+aside ul{
+    list-style:none;
+}
+
+aside li{
+    padding:8px;
+    margin-bottom:5px;
+    background:rgb(218, 216, 216);
+    border-radius:5px;
+    cursor:pointer;
+}
+
+aside li:hover{
+    background:#f3dcdc;
+}
+
+/* Área del chat */
+section{
+    flex:1;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    overflow-y:auto;
+}
+
+/* Mensajes */
+.mensaje{
+    padding:10px 15px;
+    margin:5px 0;
+    border-radius:10px;
+    max-width:60%;
+}
+
+/* Usuario */
+.usuario{
+    background:#cce5ff;
+    align-self:flex-end;
+    text-align:right;
+}
+
+/* Asistente */
+.asistente{
+    background:#e2e2e2;
+    align-self:flex-start;
+}
+
+/* Footer */
+footer{
+    padding:10px;
+    border-top:1px solid #ccc;
+    background:rgb(252, 241, 248);
+}
+
+/* Formulario */
+form{
+    display:flex;
+    gap:10px;
+}
+
+/* Input */
+input{
+    flex:1;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/* Botón */
+button{
+    padding:10px 15px;
+    border:none;
+    background:#007bff;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b6d5f7;
+
+}

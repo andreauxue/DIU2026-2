@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant</title>
+
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>DIUI Assistant</h1>
+        <p>Un asistente diseñado para responder preguntas sobre Diseño de Interfaces de Usuario.</p>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- SIDEBAR -->
+        <aside>
+            <h2>Conversaciones</h2>
+
+            <nav>
+                <ul>
+                    <li>Chat sobre formularios</li>
+                    <li>Chat sobre accesibilidad</li>
+                    <li>Chat sobre UX</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- CHAT -->
+        <section aria-label="Área de mensajes">
+
+            <article class="mensaje usuario">
+                <p>¿Cómo mejorar un formulario?</p>
+            </article>
+
+            <article class="mensaje asistente">
+                <p>Una buena práctica es usar etiquetas claras, buen contraste y una jerarquía visual adecuada.</p>
+            </article>
+
+            <article class="mensaje usuario">
+                <p>¿Qué es HTML semántico?</p>
+            </article>
+
+            <article class="mensaje asistente">
+                <p>Es el uso de etiquetas HTML que describen el significado del contenido, como header, nav o article.</p>
+            </article>
+
+            <article class="mensaje usuario">
+                <p>¿Por qué es importante usar label en los formularios?</p>
+            </article>
+
+            <article class="mensaje asistente">
+                <p>Porque mejora la accesibilidad y permite que lectores de pantalla identifiquen correctamente los campos.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <form action="#" method="post">
+
+            <label for="mensaje">Mensaje</label>
+
+            <input
+                type="text"
+                id="mensaje"
+                name="mensaje"
+                placeholder="Escribe tu mensaje..."
+                required
+                aria-required="true">
+
+            <button type="submit" aria-label="Enviar mensaje">
+                Enviar
+            </button>
+
+        </form>
+
+    </footer>
+
+</body>
+
+</html>
