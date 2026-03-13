@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIUI Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="header-logo">◈</span>
+        <h1 class="header-title">DIUI Assistant</h1>
+      </div>
+      <p class="header-description">
+        Asistente inteligente del Laboratorio de Diseño de Interfaces de Usuario
+      </p>
+    </div>
+    <div class="header-ornament"></div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Historial de conversaciones">
+      <div class="sidebar-header">
+        <span class="sidebar-icon">⊞</span>
+        <h2 class="sidebar-title">Conversaciones</h2>
+      </div>
+      <nav aria-label="Lista de conversaciones previas">
+        <ul class="conversation-list">
+          <li class="conversation-item active">
+            <span class="conv-dot"></span>
+            <div class="conv-info">
+              <span class="conv-title">Qué es Flexbox?</span>
+              <span class="conv-date">Hoy, 14:32</span>
+            </div>
+          </li>
+          <li class="conversation-item">
+            <span class="conv-dot"></span>
+            <div class="conv-info">
+              <span class="conv-title">Qué es HTML?</span>
+              <span class="conv-date">Ayer, 10:05</span>
+            </div>
+          </li>
+          <li class="conversation-item">
+            <span class="conv-dot"></span>
+            <div class="conv-info">
+              <span class="conv-title">Como cuando no sabes que más poner</span>
+              <span class="conv-date">Lun, 09:48</span>
+            </div>
+          </li>
+          <li class="conversation-item">
+            <span class="conv-dot"></span>
+            <div class="conv-info">
+              <span class="conv-title">Variables CSS y temas</span>
+              <span class="conv-date">Dom, 16:20</span>
+            </div>
+          </li>
+          <li class="conversation-item">
+            <span class="conv-dot"></span>
+            <div class="conv-info">
+              <span class="conv-title">Grid vs Flexbox</span>
+              <span class="conv-date">Vie, 11:00</span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button class="new-chat-btn">+ Nueva conversación</button>
+    </aside>
+
+    <!-- CHAT AREA -->
+    <section class="chat-section" aria-label="Área de conversación">
+
+      <div class="chat-topic-bar">
+        <span class="topic-label">Tema activo</span>
+        <span class="topic-name">Fundamentos de Flexbox</span>
+      </div>
+
+      <div class="chat-messages" role="log" aria-live="polite" aria-label="Mensajes de la conversación">
+
+        <!-- Mensaje asistente 1 -->
+        <article class="message message--assistant">
+          <div class="message-avatar" aria-hidden="true">◈</div>
+          <div class="message-body">
+            <header class="message-meta">
+              <span class="message-author">DIUI Assistant</span>
+              <time class="message-time" datetime="2026-03-12T14:28">14:28</time>
+            </header>
+            <p class="message-text">
+              Bienvenido al Laboratorio de Diseño de Interfaces de Usuario. Estoy aquí para ayudarte con cualquier duda sobre HTML, CSS y diseño de interfaces. ¿En qué te ayudo?
+            </p>
+          </div>
+        </article>
+
+        <!-- Mensaje usuario 1 -->
+        <article class="message message--user">
+          <div class="message-body">
+            <header class="message-meta">
+              <span class="message-author">Tú</span>
+              <time class="message-time" datetime="2026-03-12T14:29">14:29</time>
+            </header>
+            <p class="message-text">
+              Holi, necesito entender bien cómo funciona Flexbox. Cuál es la diferencia entre justify-content y align-items?
+            </p>
+          </div>
+          <div class="message-avatar" aria-hidden="true">U</div>
+        </article>
+
+        <!-- Mensaje asistente 2 -->
+        <article class="message message--assistant">
+          <div class="message-avatar" aria-hidden="true">◈</div>
+          <div class="message-body">
+            <header class="message-meta">
+              <span class="message-author">DIUI Assistant</span>
+              <time class="message-time" datetime="2026-03-12T14:30">14:30</time>
+            </header>
+            <p class="message-text">
+              Excelente pregunta. justify-content controla la alineación a lo largo del eje principal del contenedor flex (horizontal por defecto), mientras que align-items actúa sobre el eje transversal (vertical por defecto). Piénsalo como filas y columnas de una cuadrícula imaginaria.
+            </p>
+          </div>
+        </article>
+
+        <!-- Mensaje usuario 2 -->
+        <article class="message message--user">
+          <div class="message-avatar" aria-hidden="true">U</div>
+          <div class="message-body">
+            <header class="message-meta">
+              <span class="message-author">Tú</span>
+              <time class="message-time" datetime="2026-03-12T14:31">14:31</time>
+            </header>
+            <p class="message-text">
+              Y qué pasa cuando cambio flex-direction: column? Los ejes se invierten?
+            </p>
+          </div>
+          <div class="message-avatar" aria-hidden="true">U</div>
+        </article>
+
+        <!-- Mensaje asistente 3 -->
+        <article class="message message--assistant">
+          <div class="message-avatar" aria-hidden="true">◈</div>
+          <div class="message-body">
+            <header class="message-meta">
+              <span class="message-author">DIUI Assistant</span>
+              <time class="message-time" datetime="2026-03-12T14:32">14:32</time>
+            </header>
+            <p class="message-text">
+              Exactamente. Al usar flex-direction: column, el eje principal se vuelve vertical y el transversal horizontal. Por eso justify-content pasará a controlar el espacio vertical, y align-items el horizontal. Los ejes rotan con la dirección del flujo.
+            </p>
+          </div>
+        </article>
+
+        <!-- Mensaje usuario 3 -->
+        <article class="message message--user">
+          <div class="message-avatar" aria-hidden="true">U</div>
+          <div class="message-body">
+            <header class="message-meta">
+              <span class="message-author">Tú</span>
+              <time class="message-time" datetime="2026-03-12T14:32">14:32</time>
+            </header>
+            <p class="message-text">
+              Gashas, ahora puedes darme un ejemplo práctico de cómo centrar un elemento tanto vertical como horizontalmente?
+            </p>
+          </div>
+          <div class="message-avatar" aria-hidden="true">U</div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <form class="message-form" action="#" method="post" onsubmit="return false;">
+      <label for="message-input" class="sr-only">Escribe tu mensaje</label>
+      <input
+        type="text"
+        id="message-input"
+        name="message"
+        class="message-input"
+        placeholder="Escribe tu mensaje aquí…"
+        autocomplete="off"
+      />
+      <button
+        type="submit"
+        class="send-btn"
+        aria-label="Enviar mensaje"
+      >
+        <span class="send-icon" aria-hidden="true">→</span>
+        <span class="send-label">Enviar</span>
+      </button>
+    </form>
+    <p class="footer-note">DIUI Assistant · Laboratorio de Interfaces · 2026</p>
+  </footer>
+
+</body>
+</html>

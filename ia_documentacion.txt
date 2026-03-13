@@ -1,0 +1,21 @@
+
+  DOCUMENTACIÓN DE USO DE IA — TAREA 1
+
+1. PROMPT UTILIZADO: 
+  - Editar styles.css adjunto y poner tipografía legible, arreglar Flexbox para layout,
+    estilos diferenciados para mensajes, diseño del formulario
+
+2. RESULTADO GENERADO:
+La IA generó:
+  - Variables CSS para colores, tipografías, layout con Flexbox en body, .main-layout, sidebar y chat
+  - Estilo diferenciado para .message--assistant y .message--user   
+
+3. CAMBIOS REALIZADOS DESPUÉS DEL RESULTADO
+  - Se ajustaron los textos de los mensajes simulados para que tuvieran
+    sentido académico coherente con la asignatura (tema: Flexbox en CSS).
+  - Se revisó que cada <article> de mensaje tuviera su <header> interno
+    con autor y hora correctamente marcados con <time datetime="...">.
+  - Se comprobó la vinculación del CSS desde el HTML con <link rel="stylesheet">.
+
+cabe recalcar que use IA para responder las preguntas de ejemplo, para que fuera más realista jejej
+
