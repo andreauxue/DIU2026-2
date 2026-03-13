@@ -1,0 +1,1 @@
+console.log("Este mensaje viene desde un archivo externo")

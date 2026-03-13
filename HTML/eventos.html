@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h2 id="titulo">Hola</h2>
+    <button id="cambiar">Cambiar el título</button>
+
+    <script>
+        const titulo = document.getElementById("titulo");
+        const boton = document.getElementById("cambiar");
+
+        boton.addEventListener("click", () => {
+            titulo.textContent = "Titulo cambiado por evento";
+            titulo.style.color = "pink";
+        });
+
+    </script>
+
+
+
+
+    <!-- <h1 id="miTitulo">Título</h1>
+    <p id="parrafo">Hola</p>
+    <ul id="lista"></ul>
+    <script>
+        const titulo = document.getElementById("miTitulo");
+        const p = document.getElementById("parrafo");
+
+        const lista = document.getElementById("lista");
+        const nuevoItem = document.createElement("li")
+
+        nuevoItem.textContent = "Nuevo elemento";
+        lista.appendChild(nuevoItem);
+        nuevoItem.remove()
+        p.style.color = "pink";
+        p.style.fontSize= "30px"
+        titulo.innerHTML = "<em>Texto en cursiva</em>";
+    </script> -->
+    <!-- <button id="miBoton">Haz click</button>
+    <input type="text" id="miInput"  placeholder="Escribe algo"> -->
+
+    <!-- <form id="miFormulario">
+        <input type="text" id="nombre" placeholder="Tu nombre">
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        const form = document.getElementById("miFormulario");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            console.log("Formulario enviado con nombre:", nombre)
+        });
+    </script> -->
+
+</body>
+</html>
