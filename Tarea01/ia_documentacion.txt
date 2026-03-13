@@ -1,0 +1,14 @@
+Objetivo de la consulta: 
+Comprender el flujo de trabajo con Git/GitHub para la entrega de la tarea y obtener ayuda para estructurar el HTML semántico y CSS con Flexbox desde cero.
+
+Prompt utilizado: 
+"Hola gemini! me ayudas a realizar mi tarea de Diseño de Interfaces de Usuario... me ayudas a empezar desde 0?" y posteriormente "para el punto 3 quiero que los colores sean tonos de rojos".
+
+Resultado generado: 
+Se generó la estructura HTML cumpliendo con las etiquetas semánticas requeridas (header, main, aside, nav, ul, section, article, footer, form, label) y un archivo CSS utilizando Flexbox para el layout, con una paleta de colores en tonos rojos y oscuros. Además de instrucciones para clonar y crear ramas en Git.
+
+Modificaciones realizadas:
+Se ajustaron los tamaños generados para ser mas amigables
+
+Análisis crítico:
+Me ayudo bastante principalmente por el hecho de que nunca antes habia usado html y tampoco sabia mandar mis cambios al navegador
