@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DIUI Assistant</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>DIUI Assistant</h1>
+        <p>Esto es un asistente para practicar interfaces de chat</p>
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Sidebar  -->
+        <section class="sidebar">
+            <nav>
+                <ul>
+                    <li>Conversación sobre HTML</li>
+                    <li>Conversación sobre CSS</li>
+                    <li>Conversación sobre IA</li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Chat -->
+        <section class="chat">
+        
+            <!-- Mensajes del usuario -->
+            <article class="usuario">
+            <p>Estoy retomando HTML y CSS, pero no recuerdo bien cuál es la diferencia entre ambos.</p>
+            </article>
+
+            <article class="asistente">
+            <p>HTML se usa para definir la estructura del contenido, mientras que CSS sirve para darle estilo, como colores, tamaños, márgenes y distribución en la página.</p>
+            </article>
+
+            <article class="usuario">
+            <p>Entonces, si quiero poner un título y un párrafo, eso va en HTML, ¿verdad?</p>
+            </article>
+
+            <article class="asistente">
+            <p>Exacto. Por ejemplo, usarías etiquetas como h1 para el título y p para el párrafo. Después, con CSS, puedes cambiar su color, fuente y alineación.</p>
+            </article>
+
+            <article class="usuario">
+             <p>¿Y cómo hago para que dos secciones aparezcan una al lado de la otra, como un menú y un chat?</p>
+            </article>
+
+            <article class="asistente">
+           <p>Puedes lograrlo con Flexbox en CSS. Solo necesitas convertir el contenedor principal en un elemento flexible usando display: flex; para acomodar las secciones en fila.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Formulario -->
+    <footer>
+        <form>
+
+            <label for="mensaje">Escribe un mensaje:</label>
+
+            <input type="text" id="mensaje" name="mensaje">
+
+            <button aria-label="Enviar mensaje">
+                Enviar
+            </button>
+
+        </form>
+    </footer>
+
+</body>
+</html>
