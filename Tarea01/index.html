@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Asistente de DIU</h1>
+        <p class="header-description">Interacción básica con DIU para conocer más sobre ella y su funcionamiento visual e interno</p>
+    </header>
+
+    <!-- BARRA DE CONVERSACIONES (horizontal con botones) -->
+    <div class="barra-conversaciones">
+        <span class="titulo-conversaciones">Conversaciones</span>
+        
+        <nav class="lista-chats">
+            <button class="chat-button"> Chat acerca de DIU</button>
+            <button class="chat-button"> Chat sobre el manejo del codigo</button>
+            <button class="chat-button"> Chat de personalización de css</button>
+            <button class="chat-button"> Chat de codigos basicos</button>
+            <button class="chat-button"> Otros ...</button>
+        </nav>
+    </div>
+
+    <main role="main">
+        <section aria-label="Área de mensajes" class="chat-area">
+               
+            <article class="mensaje usuario">
+                <p> <q>Qué significa HTML</q></p>
+            </article>
+            
+         
+            <article class="mensaje asistente">
+                <p> HyperText Markup Language-  Lenguaje de Marcado de Hipertexto, es el estándar fundamental para crear y estructurar páginas web</p>
+            </article>
+            
+            <article class="mensaje usuario">
+                <p>Quien lo creo?</p>
+            </article>
+            
+            <article class="mensaje asistente">
+                <p>Fue creado por Tim Berners-Lee en el CERN en 1989-1991 </p>
+            </article>
+            
+            <article class="mensaje usuario">
+                <p>Cuál es la versión más actual?</p>
+            </article>
+            
+            <article class="mensaje asistente">
+                <p>HTML 5.2/5.3: Actualizaciones centradas en la accesibilidad, rendimiento y mejoras en los formularios. </p>
+            </article>
+        </section>
+    </main>
+
+    <footer> 
+        <form action="#" method="post">
+            <label for="mensaje" class="sr-only">Mensaje</label>
+            <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required aria-required="true">
+            <button type="submit" aria-label="Enviar mensaje">
+                Enviar
+            </button>
+        </form>
+    </footer>
+</body>
+</html>
