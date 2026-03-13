@@ -1,0 +1,4 @@
+Prompt utilizado para Gemini 3.1 Pro
+
+"Hola, estoy trabajando en mi tarea de Diseño de Interfaces donde debo crear un chat básico. Analiza el código que hicimos en clase y explícame cómo funcionan los conceptos de Flexbox y las etiquetas semánticas como <article> y <nav>. Además, dame ideas de qué estilos visuales podría modificar (colores, bordes) para que mi diseño sea original y diferente al de la clase. Finalmente, ayúdame a generar los diálogos simulados: necesito 3 mensajes del usuario y 3 del asistente sobre temas de diseño de interfaces."
+
