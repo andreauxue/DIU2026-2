@@ -1,0 +1,190 @@
+/* Primero reseteams los márgenes y padding de todos los elementos, el navegador puede darnos por defecto y no señor*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* par que el padding no agrande demas las cajas */
+}
+
+/* estilos base de toda la página */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  background-color: #0F1026; 
+  color: #AFD7F6; 
+  height: 100vh; /* Nos sirve para que ocupe toda la pantalla */
+  display: flex;
+  flex-direction: column; /* Este es para apilar header, main y footer verticalmente */
+}
+
+/* la cabecera */
+header {
+  background-color: #051C2B;
+  padding: 1rem;
+  border-bottom: 1px solid #042F4B;
+}
+
+/* título con efecto neón cyberpunk2077 :OO */
+header h1 {
+  color: #FF77FF; 
+  text-shadow: 0 0 5px #FF77FF, 0 0 15px #FF77FF, 0 0 30px rgba(255, 119, 255, 0.8);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+/* Este es para la descripción del asistente */
+header p {
+  color: #00FFFF; 
+  text-shadow: 0 0 4px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.3);
+  font-weight: 500;
+}
+
+/* sidebar de navegación */
+nav {
+  width: 220px;
+  background-color: #051C2B;
+  color: #AFD7F6;
+  padding: 1rem;
+  border-right: 1px solid #042F4B;
+}
+
+/* quita los puntos de la lista */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Este es para cada conversación en el sidebar */
+nav ul li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Nos sirve para el efecto hover de las conversaciones */
+nav ul li:hover {
+  color: #FF77FF; 
+  text-shadow: 0 0 8px rgba(255, 119, 255, 0.6);
+}
+
+/* Este es para poner el nav y el chat lado a lado con flexbox */
+main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/*  área de mensajes del chat */
+.chat {
+  flex: 1; /* Asi ocupa todo el espacio restante */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  background-image: linear-gradient(to bottom, #0F1026, #051C2B); 
+}
+
+/* estilos base de todos los mensajes, da los bordes un poco redondeados y que no se extienda*/
+.mensaje {
+  padding: 10px 15px;
+  border-radius: 4px;
+  max-width: 70%;
+  letter-spacing: 0.5px; 
+}
+
+/* para los mensajes del usuario pegados a la derecha */
+.usuario {
+  background-color: rgba(255, 119, 255, 0.05); 
+  color: #FF77FF; 
+  align-self: flex-end;
+  border: 1px solid #FF77FF;
+  box-shadow: 0 0 8px #FF77FF, 0 0 15px rgba(255, 119, 255, 0.3), inset 0 0 10px rgba(255, 119, 255, 0.2);
+  text-shadow: 0 0 4px #FF77FF, 0 0 10px rgba(255, 119, 255, 0.6);
+}
+
+/* Este es para los mensajes del asistente, pegaditos a la izquierda */
+.asistente {
+  background-color: rgba(0, 255, 255, 0.05); 
+  color: #00FFFF; 
+  align-self: flex-start;
+  border: 1px solid #00FFFF;
+  box-shadow: 0 0 8px #00FFFF, 0 0 15px rgba(0, 255, 255, 0.3), inset 0 0 10px rgba(0, 255, 255, 0.2);
+  text-shadow: 0 0 4px #00FFFF, 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Este es para el footer con el formulario, le da un fondo oscuro y lo pone en fila con el sidebar */
+footer {
+  display: flex;
+  background-color: #051C2B;
+}
+
+/* Nos sirve para alinear el formulario con el chat y no con el sidebar, mi error corregido xd */
+.footer-spacer {
+  width: 220px; 
+  background-color: #051C2B; 
+  border-right: 1px solid #042F4B;
+}
+
+/* contenedor del formulario */
+.footer-content {
+  flex: 1;
+  padding: 15px 20px;
+  border-top: 2px solid #53A0C4; 
+}
+
+/* sirve para alinear el label, input y botón en fila */
+footer form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+footer label {
+  font-weight: bold;
+  color: #FF77FF; 
+}
+
+/* campo de texto donde se escribe el mensaje */
+footer input {
+  flex: 1;
+  padding: 10px;
+  background-color: #0F1026;
+  color: #AFD7F6;
+  border: 1px solid #53A0C4;
+  border-radius: 4px;
+  font-size: 16px;
+}
+/* para que el texto tenga un color más claro cuando el campo está vacío */
+footer input::placeholder {
+  color: #53A0C4;
+  opacity: 0.6;
+}
+
+/* para el efecto de brillo cuando el input está activo */
+footer input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(83, 160, 196, 0.5); 
+}
+
+/* Este es para el botón de enviar con su diseño propio */
+footer button {
+  padding: 10px 20px;
+  background-color: #FF77FF; 
+  color: #0F1026;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0px #53A0C4; 
+}
+
+/* Nos sirve para el efecto hover del botón asi como estilo retro */
+footer button:hover {
+  background-color: #53A0C4; 
+  color: #0F1026;
+  box-shadow: 3px 3px 0px #FF77FF; 
+  transform: translate(-2px, -2px);
+}
