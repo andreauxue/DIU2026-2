@@ -1,0 +1,13 @@
+Hermes Alberto Delgado Díaz.
+N.Cuenta: 319258613
+
+Use la IA para la simulación en las preguntas en el cuestionario,
+le hice 3 preguntas
+¿Cómo funciona article en HTML?
+¿Cuál es la diferencia de article con section?
+¿Para qué sirve div y su diferencia con section y article?
+
+Las respuestas las puse de manera breve en la simulación.
+
+Además para poder acomodar de manera correcta el logo de bot que 
+quería poner en mi interfaz. Me sugirio usar grid para una alineación 'buena'.
