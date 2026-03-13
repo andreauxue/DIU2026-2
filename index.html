@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIUI Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1>DIUI Assistant</h1>
+    <p>Tu asistente de conversación personal</p>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Conversaciones</h2>
+      <nav aria-label="Lista de conversaciones">
+        <ul class="conversation-list">
+          <li class="active">Sesión actual</li>
+          <li>Consulta anterior</li>
+          <li>Soporte técnico</li>
+          <li>Revisión de tarea</li>
+          <li>Otra consulta</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- CHAT -->
+    <section class="chat-panel">
+      <div class="chat-messages">
+
+        <article class="message message--user">
+          <span class="message-role">Tú</span>
+          <p class="message-bubble">Hola que puedess hacer?</p>
+        </article>
+
+        <article class="message message--assistant">
+          <span class="message-role">DIUI</span>
+          <p class="message-bubble"> Puedo ayudarte con preguntas y ejemplos simples.</p>
+        </article>
+
+        <article class="message message--user">
+          <span class="message-role">Tú</span>
+          <p class="message-bubble">¿Qué es HTML?</p>
+        </article>
+
+        <article class="message message--assistant">
+          <span class="message-role">DIUI</span>
+          <p class="message-bubble"> HTML es el lenguaje que se usa para crear páginas web.</p>
+        </article>
+
+        <article class="message message--user">
+          <span class="message-role">Tú</span>
+          <p class="message-bubble"> Y CSS para qué sirve?</p>
+        </article>
+
+        <article class="message message--assistant">
+          <span class="message-role">DIUI</span>
+          <p class="message-bubble">CSS se usa para dar estilo a la página: colores, tamaños y diseño.</p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <form class="message-form" action="#" method="post" onsubmit="return false;">
+      <label for="user-input">Mensaje:</label>
+      <input
+        type="text"
+        id="user-input"
+        name="user-input"
+        class="message-input"
+        placeholder="Escribe tu mensaje aquí..."
+        autocomplete="off"
+      />
+      <button type="submit" class="send-btn" aria-label="Enviar mensaje">
+        Enviar
+      </button>
+    </form>
+  </footer>
+
+</body>
+</html>
