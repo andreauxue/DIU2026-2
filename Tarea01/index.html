@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1 | HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+<header>
+    <div id = "content area">
+        <div class="chat-header">
+        <span class="system-name">DIU Assistant</span>
+                    <!--Simular la respuesat de chat gpt con todo y sus emojis-->
+            <p> Soy tu asistente virtual de Diseño de Inerfaces de Usuario,
+                juntos vamos a poder con HTML y CSS ¡No tengas miedo
+                que nosotros podemos con tus tareas! (Y si no podemos le preguntamos a otra IA 	&#128517;)  </p>
+        <h1 class="chat-title">Conversación dudas HTML</h1>
+        <div class="spacer"></div> </div>
+
+    <section id="chat">
+        </section>
+    </div>
+</header>
+<main role = "main">
+    <aside role = "navigation">
+        <!-- Boton para simular crear nuevo chat -->
+        <button class="nuevo-chat"> + Nuevo chat</button>
+        <h2> Chats </h2>
+       <nav>
+            <ul>
+                <li> conversacion prueba Asistente </li>
+                <li> Conversación dudas HTML </li>
+                <li> Auxilio con CSS </li>
+            </ul>
+        </nav>  
+        <!--Boton parasimular entrar a configuracion-->
+        <button class="configuracion">⚙ Configuración</button>
+    </aside>
+    <div class="chat-container">
+        <!--Simulamos la conversacion agregando comentarios motivadores de chat gpt (lo digo por experiencia)-->
+        <section aria-label="Conversacion" >
+            <article class = "mensaje usuario">
+                <p> Tengo una duda sobre HTML ya que no logro entender del todo
+                    ¿Sabes usar HTML y como se relaciona con CSS?, 
+                    estoy desesperado
+                </p>
+            </article>
+        
+            <article class = "mensaje asistente">
+                <p> Entiendo tu frustracion, sé que a veces puede ser
+                    frustrante pero vamos a  revisar juntos lo que necesitas, 
+                    para conectar HTML con CSS
+                </p>
+            </article>
+            <article class = "mensaje usuario">
+                <p> Sí, pero necesito que me ayudes, no quiero solo
+                    mensajes motivadores
+                </p>
+            </article>
+        
+            <article class = "mensaje asistente">
+                <p> Entiendo tu frustracion, sé que a veces puede ser
+                    frustrante ¿Dime en que puedo ayudarte?
+                </p>
+            </article>
+            <article class = "mensaje usuario">
+                <p> Te dije que necesito ayuda con HTML y CSS, 
+                    no quiero mensajes motivadores
+                </p>
+            </article>
+        
+            <article class = "mensaje asistente">
+                <!-- Por lo visto en clase, un brillito de respuesta-->
+                <p> Lo siento, tienes razón, vamos a revisar juntos
+                    tus dudas sobre HTML y CSS, ¿Qué es lo que no entiendes? 🌟                
+                </p>
+            </article>
+        </section>
+    </div>
+</main>
+    <footer>
+        <form action="#" method="post">
+            <label for="mensaje">Mensaje:</label>
+            <input type="text" id="mensaje" name="mensaje" placeholder="Escribe algo..." required aria-required="true">
+            <button aria-label="Enviar mensaje"> 
+                Enviar
+            </button>
+        </form>
+    </footer>
+</body>
