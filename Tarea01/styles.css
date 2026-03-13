@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-bg: #000000;
+    --color-surface: #1c0334;
+    --color-primary: #614676;
+    --color-primary-light: #d5c2e8;
+    --color-primary-dark: #110217;
+    --color-secondary: #cbb6ff;
+    --color-secondary-light: #e7e1eb;
+    --color-text: #2b2240;
+    --color-text-light: #dddae8;
+
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+
+    padding: 1.5rem 1.5rem;
+    box-shadow: var(--shadow-soft);
+    letter-spacing: 0.1cm;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+aside {
+    width: 300px;
+    background-color: var(--color-surface);
+    color: var(--color-text-light);
+
+    padding: 0.5rem 0.5rem;
+    border-right: 1px solid var(--color-surface);
+
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem;
+}
+
+aside h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03cm;
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+aside li {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+aside li:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-light)
+}
+
+section {
+    flex: 1;
+    padding: 2rem;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mensaje {
+    max-width: 60%;
+    padding: 1rem 1.25rem;
+
+    border-radius: var(--radius-lg);
+
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+
+.usuario {
+    align-self: flex-end;
+    background-color: var(--color-primary);
+    color: white;
+
+    border-bottom-right-radius: 4px;
+}
+
+.asistente {
+    align-self: flex-start;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+
+    border-bottom-left-radius: 4px;
+}
+
+.chat-activo {
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+    
+footer {
+    background-color: var(--color-surface);
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--color-surface);
+
+    display: flex;
+    gap: 0.5rem;
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+    font-size: 3rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 1rem 1rem;
+    border: 1px solid var(--color-surface);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+
+    transition: border-color 0.3s ease, box-shadow 0.25s ease;
+}
+
