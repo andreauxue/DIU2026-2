@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DIUI Assistant</h1>
+        <p>Tu asistente virtual para resolver dudas de Diseño de Interfaces.</p>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <nav>
+                <h2>Historial</h2>
+                <ul>
+                    <li><a href="#">Teoría del Color</a></li>
+                    <li><a href="#">Accesibilidad web</a></li>
+                    <li><a href="#">Patrones de diseño</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="chat-container">
+            <div class="chat-messages">
+                <article class="msg user">
+                    <p>Hola, ¿me podrías explicar qué es el contraste en accesibilidad web?</p>
+                </article>
+                <article class="msg bot">
+                    <p>¡Hola! El contraste se refiere a la diferencia de luminosidad entre el texto y el fondo. Es crucial para que las personas con problemas de visión puedan leer tu contenido.</p>
+                </article>
+                <article class="msg user">
+                    <p>Entiendo. ¿Existe alguna herramienta para medir eso?</p>
+                </article>
+                <article class="msg bot">
+                    <p>Sí, la W3C recomienda usar herramientas como WebAIM Contrast Checker. Lo ideal es mantener un ratio de al menos 4.5:1 para texto normal.</p>
+                </article>
+                <article class="msg user">
+                    <p>¡Perfecto! Lo usaré en mi próximo proyecto de clase.</p>
+                </article>
+                <article class="msg bot">
+                    <p>¡Excelente iniciativa! Si necesitas ayuda probando paletas de colores, aquí estaré.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <form action="#" class="chat-form">
+            <label for="chatInput" class="sr-only">Escribe tu mensaje al asistente</label>
+            <input type="text" id="chatInput" name="chatInput" placeholder="Escribe aquí tu duda..." required>
+            <button type="submit" aria-label="Enviar mensaje">Enviar</button>
+        </form>
+    </footer>
+</body>
+</html>
