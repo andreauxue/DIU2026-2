@@ -1,0 +1,16 @@
+
+
+Prompt utilizado:
+Pedí ayuda para mejorar algunos estilos en CSS de una interfaz de chat hecha en HTML.
+Solicité ejemplos de cómo usar Flexbox para acomodar el sidebar y el área del chat,
+y cómo diferenciar los mensajes del usuario y del asistente.
+
+Resultado generado:
+Se obtuvo un ejemplo de reglas CSS que incluían un reset básico de márgenes,
+uso de Flexbox para el layout principal, estilos para el sidebar y el área de chat,
+y clases diferentes para los mensajes del usuario y del asistente.
+
+Cambios realizados:
+Se ajustaron algunos nombres de clases para que coincidieran con los del HTML,
+se modificaron colores y tamaños, y se simplificaron algunos estilos para que
+quedaran más claros y acordes a la tarea.

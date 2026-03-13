@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>DIUI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>DIUI Assistant</h1>
+    <p>Asistente de chat para resolver dudas y conversar.</p>
+</header>
+
+<main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <h2>Conversaciones</h2>
+            <ul>
+                <li>Chat General</li>
+                <li>Soporte Técnico</li>
+                <li>Proyecto Web</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Chat -->
+    <section class="chat">
+
+        <article class="mensaje usuario">
+            <p>Hola, ¿puedes ayudarme con mi tarea?</p>
+        </article>
+
+        <article class="mensaje asistente">
+            <p>Claro, dime qué necesitas.</p>
+        </article>
+
+        <article class="mensaje usuario">
+            <p>Necesito hacer una interfaz de chat en HTML.</p>
+        </article>
+
+        <article class="mensaje asistente">
+            <p>Puedes usar HTML para la estructura y CSS con Flexbox para el diseño.</p>
+        </article>
+
+        <article class="mensaje usuario">
+            <p>Perfecto, ¿y cómo diferencio los mensajes?</p>
+        </article>
+
+        <article class="mensaje asistente">
+            <p>Usa clases diferentes para usuario y asistente y aplica estilos distintos en CSS.</p>
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <form>
+        <label for="mensaje">Escribe tu mensaje:</label>
+        <input type="text" id="mensaje" name="mensaje" placeholder="Escribe aquí...">
+
+        <button type="submit" aria-label="Enviar mensaje">
+            Enviar
+        </button>
+    </form>
+
+</footer>
+
+</body>
+</html>
