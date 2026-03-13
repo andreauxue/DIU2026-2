@@ -1,0 +1,13 @@
+El objetivo de la consulta (la primera) fue para saber porqué al momento de visualizar los resultados de mi archivo había un espacio en blanco grande el cual no era ocupado por nada. La consulta fue precisamente para saber si había una posible causa de lo que estaba ocurriendo: "La captura que te estoy dando muestra un espacio en blanco que no es ocupado por ninguno de mis elementos (la barra lateral izquierda ni los mensajes) ¿Existe una posible solución o causa de que ese espacio no lo pueda ocupar por mis elementos"
+
+ChatGPT: El espacio en blanco viene posiblemente de la estructura del HTML, es posible que tengas dos contenedores separados para la conversación y uno está vacío, por eso aparece un espacio gris antes de los mensajes
+
+Y me generó un código simulando en donde podía estar el error, después de eso pude notar que mi HTML si tenía un contenedor vacío y estaba haciendo que no pudiera poner nada ahí.
+
+Posteriormente me ayudó a poder poner el botón de "Configuración" ya que no lograba que el botón saliera en la parte de hasta abajo de la barra lateral, lo ponía pegado al texto de los Chats: "En la barra lateral izquierda quiero poder poner mi botón de configuración hasta abajo, cómo puedo configurar eso"
+
+ChatGPT: "Es una buena idea de interfaz. Solo necesitas usar flexbox para colocar tus botones arriba y abajo"
+
+Después se generaron dos códigos CSS para los botones "Nuevo chat" y "Configuración" con la explicación de los mismos haciendo énfasis sobre "margin-top: auto;" que sirve para "empujar" el botón hasta el fondo del aside
+
+En general creo que es bastante útil poder pasarle imágenes a las IA ya que pueden "visualizar" lo que les pasas y es mucho más fácil explicar las necesidades (en algunos casos) de esta forma más un prompt sobre lo que esta pasado y lo que quieres conseguir ya que puede tener una idea más clara de como generar una respuesta más adecuada a las necesidades del usuario y no solo suponer que es lo que le quieres tratar de decir
