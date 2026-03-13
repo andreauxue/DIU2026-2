@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIUI Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="app-header">
+      <h1>DIUI Assistant</h1>
+      <p>Asistente de conversación para practicar interfaces de chat con HTML y CSS.</p>
+    </header>
+
+    <main class="app-main">
+
+      <aside class="sidebar">
+        <h2>Conversaciones</h2>
+        <nav aria-label="Lista de conversaciones">
+          <ul class="conversation-list">
+            <li><a href="#">Proyecto DIUI</a></li>
+            <li><a href="#">Dudas HTML</a></li>
+            <li><a href="#">CSS Layout</a></li>
+            <li><a href="#">Accesibilidad</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="chat-section">
+        <div class="messages">
+
+          <article class="message user-message">
+            Hola, ¿cómo puedo organizar mi interfaz de chat?
+          </article>
+
+          <article class="message assistant-message">
+            Puedes dividirla en header, sidebar, área de chat y formulario.
+          </article>
+
+          <article class="message user-message">
+            ¿Cómo diferencio visualmente los mensajes?
+          </article>
+
+          <article class="message assistant-message">
+            Usa colores distintos y alinea los mensajes del usuario a la derecha.
+          </article>
+
+          <article class="message user-message">
+            También quiero que se vea moderna.
+          </article>
+
+          <article class="message assistant-message">
+            Usa Flexbox, buen espaciado y colores suaves para un diseño limpio.
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <form class="message-form">
+        <label for="mensaje">Mensaje</label>
+        <input id="mensaje" type="text" placeholder="Escribe tu mensaje">
+        <button aria-label="Enviar mensaje">Enviar</button>
+      </form>
+    </footer>
+
+  </div>
+</body>
+</html>
