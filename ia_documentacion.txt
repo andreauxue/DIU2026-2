@@ -1,0 +1,84 @@
+1. Prompt:
+"Why is my label appearing misaligned in the footer, my current definition is:
+footer label {
+    color: var(--color-bg);
+    margin-right: 8px;
+    font-family: inherit;
+}
+
+Solución:
+
+To get them perfectly aligned vertically, Flexbox is the best tool. 
+Make sure your <form> tag (which acts as the 'box' holding your label, input, and button) has these properties:
+footer form {
+    display: flex;
+    /* The magic property */
+    align-items: center; 
+    gap: 12px;
+}
+
+Cambio:
+Agregué  align-items: center;  al estilo de footer. (no agregué el gap)
+
+
+2. Prompt:
+How can I make my messages fit the container they are in, my current approach is not adapting its size.
+
+.mensaje {
+max-width: 80%;
+padding: 10px 14px;
+border-radius: var(--radius-lg);
+}
+.usuario {
+align-self: flex-end;
+background: var(--color-primary);
+color: white;
+border-bottom-right-radius: 4px;
+}
+.asistente {
+align-self: flex-start;
+background: var(--color-surface);
+color: var(--color-text);
+border-bottom-left-radius: 4px;
+box-shadow: var(--shadow-soft);
+}
+.wrapper {
+padding: 40px;
+}
+
+Solución: The issue is your .wrapper has padding: 40px which adds a lot of unnecessary space, and the message bubbles need a few fixes to size naturally. Here's what to change:
+.mensaje {
+  max-width: 65%;          /* don't let bubbles get too wide */
+  padding: 12px 16px;      /* padding goes HERE, not in wrapper */
+  border-radius: var(--radius-lg);
+  word-wrap: break-word;   /* breaks long words so they don't overflow */
+  overflow-wrap: break-word;
+}
+
+.wrapper {
+  padding: 0;              /* remove the excessive padding */
+}
+
+For the input box adapting in size, it already has flex: 1 which makes it stretch horizontally. If you also want the footer to shrink vertically based on content, reduce the fixed padding:
+
+footer {
+  background-color: var(--color-primary-dark);
+  padding: 16px 24px;      /* was 44px, way too tall */
+  border-top: 1px solid var(--color-secondary);
+}
+
+Cambio: Se agregó los word-wrap, overflow-wrap, y cambió el valor de padding. Decidí eliminar la clase wrapper ya que no me servía de nada.
+
+
+3. Prompt:
+Why is my font not appearing in some of the components ?
+
+Solución:
+You should know that form elements like <input> and <button> do not inherit fonts from the body by default. If you type in your input field right now, it will look like the old font!
+You can fix it instantly by adding this to your CSS:
+input, button {
+    font-family: inherit;
+}
+
+Cambios:
+Se agregó la opción de inherit a cada uno de los elementos del footer e input.
