@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>DIUI Assistant</h1>
+    <p>Asistente de conversación para resolver dudas prácticas. En este chat te puede ayudar incluso a reparar tu bicicleta.</p>
+</header>
+
+<main>
+
+    <nav class="sidebar">
+        <h2>Conversaciones</h2>
+        <ul>
+            <li>Reparar bici</li>
+            <li>Configuración app</li>
+            <li>Ideas de diseño</li>
+            <li>Dudas UI</li>
+        </ul>
+    </nav>
+
+    <section class="chat">
+
+        <article class="mensaje usuario">
+            <p>Se me ponchó la llanta de mi bicicleta. ¿Cómo la puedo reparar?</p>
+        </article>
+
+        <article class="mensaje asistente">
+            <p>Primero debes retirar la rueda de la bicicleta y sacar la cámara del neumático usando palancas o una herramienta similar.</p>
+        </article>
+
+        <article class="mensaje usuario">
+            <p>¿Cómo encuentro exactamente dónde está la ponchadura?</p>
+        </article>
+
+        <article class="mensaje asistente">
+            <p>Puedes inflar un poco la cámara y sumergirla en agua. Las burbujas te indicarán el lugar donde está el agujero.</p>
+        </article>
+
+        <article class="mensaje usuario">
+            <p>Ya encontré el agujero, ¿qué sigue?</p>
+        </article>
+
+        <article class="mensaje asistente">
+            <p>Lija ligeramente la zona, aplica pegamento para parches, coloca el parche y presiónalo durante unos minutos. Después vuelve a montar la cámara y el neumático.</p>
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+
+<form>
+    <label for="mensaje">Mensaje:</label>
+    <input 
+        type="text"
+        id="mensaje"
+        name="mensaje"
+        placeholder="Escribe tu mensaje..."
+        required
+    >
+
+    <button type="submit" aria-label="Enviar mensaje">
+        Enviar
+    </button>
+</form>
+
+</footer>
+
+</body>
+</html>
