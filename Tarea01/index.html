@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant - Tarea 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>DIUI Assistant</h1>
+        <p>Tu asistente virtual para el Diseño de Interfaces.</p>
+    </header>
+
+    <main class="app-main">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>Conversación 1</li>
+                    <li>Conversación 2</li>
+                    <li>Conversación 3</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="chat-area">
+            <article class="message user-msg">
+                <p>Hola, necesito ayuda con mi tarea de HTML.</p>
+            </article>
+            <article class="message bot-msg">
+                <p>¡Claro! ¿En qué parte específica te has atascado?</p>
+            </article>
+            <article class="message user-msg">
+                <p>No entiendo bien cómo usar Flexbox para el layout.</p>
+            </article>
+            <article class="message bot-msg">
+                <p>Flexbox es ideal para alinear elementos. Te mostraré un ejemplo.</p>
+            </article>
+            <article class="message user-msg">
+                <p>¡Genial, gracias! También necesito agregar un formulario.</p>
+            </article>
+            <article class="message bot-msg">
+                <p>Perfecto, recuerda usar las etiquetas form y label correctamente.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <form class="chat-form">
+            <label for="chat-input" class="visually-hidden">Escribe tu mensaje</label>
+            <input type="text" id="chat-input" placeholder="Escribe un mensaje...">
+            <button type="submit" aria-label="Enviar mensaje">Enviar</button>
+        </form>
+    </footer>
+
+</body>
+</html>
