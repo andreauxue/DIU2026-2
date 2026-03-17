@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* para poner el header arriba y footer abajo */
+}
+
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+/* separo un poco el título del texto */
+header h1 {
+    margin-bottom: 6px;
+}
+
+/* contenedor principal donde van sidebar y chat */
+main {
+    flex: 1;/* Ocupar todo el espacio entre header y footer */
+    display: flex;/* Valor por defecto de la dirección es renglón, es decir que se ponen uno a lado del otro*/
+}
+
+/* Conversaciones en el lateral*/
+.sidebar {
+    width: 220px;
+    /* Ancho fijo sugerido por gpt */
+    background: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+/* Texto "conversaciones" */
+.sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* quitar bullets de las "conversaciones" */
+.sidebar ul {
+    list-style: none;
+}
+
+/* separar "conversaciones" */
+.sidebar li {
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+/* efecto con mouse */
+.sidebar li:hover {
+    background: #3f5a74;
+}
+
+/* contenedor chats */
+.chat {
+    flex: 1;
+    /* ocupa todo el espacio que no usa el sidebar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* mensajes uno debajo del otro */
+    gap: 12px;
+    /* espacio entre mensajes */
+}
+
+/* estilo general de los mensajes */
+.mensaje {
+    max-width: 60%;
+    /* para que no ocupen todo el ancho */
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* mensajes del usuario van a la derecha */
+.usuario {
+    align-self: flex-end;
+    background: #3498db;
+    color: white;
+}
+
+/* mensajes del asistente van a la izquierda */
+.asistente {
+    align-self: flex-start;
+    background: #e1e4e8;
+}
+
+/* parte de abajo donde está el formulario */
+footer {
+    background: #ecf0f1;
+    padding: 15px;
+}
+
+/* uso flex para alinear input y botón */
+footer form {
+    display: flex;
+    gap: 10px;
+    /* espacio entre input y botón */
+}
+
+/* input ocupa todo el espacio disponible */
+footer input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    /* usa la misma fuente que el body */
+}
+
+/* botón de enviar */
+footer button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2ecc71;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* color más obscurocuando pasas el mouse por el botón */
+footer button:hover {
+    background: #27ae60;
+}
