@@ -1,0 +1,44 @@
+# Uso de herramientas de IA
+
+Para el desarrollo de esta tarea se utilizó una herramienta de inteligencia artificial (Chat-GPT) con el objetivo de apoyar en la generación de ideas, resolución de dudas y corrección de errores durante la implementación de la interfaz.
+
+## Prompts utilizados
+
+### 1. Generación de conversación simulada
+
+**Prompt utilizado:**
+
+> Genera una conversación entre un usuario y un asistente de inteligencia artificial relacionada con la materia de Diseño de Interfaces de Usuario. La conversación debe incluir al menos 5 mensajes del usuario y 5 del asistente y tratar temas como HTML, CSS o diseño de interfaces.
+
+### 2. Ideas para conversaciones en la barra lateral
+
+**Prompt utilizado:**
+
+> Sugiere nombres de conversaciones o temas que podrían aparecer en una barra lateral de un asistente que ayuda a aprender HTML, CSS y diseño de interfaces.
+
+### 3. Resolución de errores en el código
+
+**Prompt utilizado:**
+
+> Revisa este fragmento de mi código css y dime por qué la los mensajes del usuario y del asistente no tienen el padding correcto y parece que no pertenecen a la clase mensaje
+---
+
+## Resultados generados por la IA
+
+La herramienta de IA ayudó a:
+
+- Generar una conversación simulada entre el usuario y el asistente sobre temas relacionados con HTML y CSS.
+- Proponer ideas de nombres para las conversaciones mostradas en la barra lateral (por ejemplo: *Estructura básica de una página web*, *Flexbox*, *Conectar CSS con HTML*, etc.).
+- Identificar que la clase usuario y asistente no pertenecían a la clase mensaje.
+
+---
+
+## Cambios realizados al resultado generado
+
+El contenido generado por la IA fue adaptado manualmente para ajustarlo al diseño de la interfaz. Entre los cambios realizados se incluyen:
+
+- Ajustar los textos para que funcionaran como mensajes dentro del sistema de chat, agregarle emojis y corregir estilos no aceptados por HTML.
+- Integrar las conversaciones dentro de elementos `article` en el HTML.
+- Modificar algunos nombres de conversaciones en la barra lateral para una mejor visualización.
+- Agregar proyectos, conversaciones recientes, etc, con la información que porporcionó la IA.
+- Corregir manualmente errores de código detectados durante la implementación.

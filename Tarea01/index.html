@@ -1,0 +1,110 @@
+<!-- Nos indica que estamos usando html -->
+<!DOCTYPE html>
+<!-- Establece el idioma para evitar problemas de codificación -->
+<html lang="es">
+<!-- Metadatos de la página -->
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Enlaza el archivo de estilo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Cuerpo de la página -->
+<body>
+<header>
+    <h1>&#128039;DIUI Assistant</h1>   
+    <p>Tu asistente de inteligencia artificial para aprender DIUI</p>
+</header>
+<!-- Contenido principal -->
+<main role="main">
+    <aside role="navigation">
+        <!-- Sección de proyectos -->
+        <section class="menu">
+            <h2>&#128194;Proyectos</h3>
+            <nav>
+                <ul>
+                    <li>&#x1F4C1;+ Nuevo Proyecto</li>
+                    <li>&#128193; Página Web</li>
+                    <li>&#128193; Tarea 1</li>
+                    <li>&#128193; CSS</li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Sección de recientes -->
+        <section class="menu">
+            <h2>&#8987;Recientes</h3>
+            <nav>
+                <ul>
+                    <li class="chat-activo">Estructura página web</li>
+                    <li>&#128193; CSS</li>
+                    <li>Conectar CSS con HTML</li>
+                   
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Sección de chats -->
+        <section class="menu">
+            <h2>&#128392;Chats</h3>
+            <nav>
+                <ul>
+                    <li>&#128395;+ Nuevo Chat</li>
+                    <li>Estructura página web</li>
+                    <li>Conectar CSS con HTML</li>
+                    <li>Etiquetas semánticas</li>
+                    <li>Flexbox</li>
+                    <li>Diseño de mensajes de chat</li>
+                    <li>Uso de formularios en HTML</li>
+                </ul>
+            </nav>
+        </section>
+
+    </aside>
+    <section aria-label="Conversación">
+        <!-- Área de chat principal -->
+        <article class="mensaje usuario">
+            <p>Hola DIUI Assistant, estoy empezando a aprender HTML. ¿Cuál es la estructura básica de una página web?</p>
+        </article>
+        <article class="mensaje asistente">
+            <p>Hola. La estructura básica de una página HTML incluye las etiquetas &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt; y &lt;body&gt;. En el head se colocan los metadatos y enlaces a archivos como CSS, mientras que en el body se coloca todo el contenido visible de la página.&#127760;</p>
+        </article>
+        <article class="mensaje usuario">
+            <p>Entiendo. ¿Y cómo puedo conectar mi archivo CSS con el HTML?</p>
+        </article>
+        <article class="mensaje asistente">
+            <p>Para conectar tu archivo CSS debes usar la etiqueta &lt;link&gt; dentro del head. Por ejemplo:
+            <p>&lt;link rel="stylesheet" href="styles.css"&gt;.</p>
+            <p>De esta forma los estilos definidos en el archivo CSS se aplicarán a la página.&#127775;&#127775;</p>
+        </article>
+        <article class="mensaje usuario">
+            <p>Estoy tratando de organizar mi página. ¿Cuál es la diferencia entre div y etiquetas como header, main o footer?</p>
+        </article>
+        <article class="mensaje asistente">
+            <p>Las etiquetas como header, main y footer son etiquetas semánticas. Esto significa que ayudan a describir el propósito del contenido. Por ejemplo, header se usa para el encabezado del sitio, main para el contenido principal y footer para la parte final. En cambio, div es un contenedor genérico que no describe el contenido.&#128187;</p>
+        </article>
+        <article class="mensaje usuario">
+            <p>En clase mencionaron Flexbox para organizar elementos. ¿Para qué sirve?</p>
+        </article>
+        <article class="mensaje asistente">
+            <p>Flexbox es un sistema de diseño de CSS que permite organizar elementos de forma flexible dentro de un contenedor. Con Flexbox puedes alinear elementos horizontal o verticalmente, distribuir espacios y adaptar la interfaz a diferentes tamaños de pantalla.&#128204;</p>
+        </article>
+        <article class="mensaje usuario">
+            <p>¡Gracias por la explicación! Creo que tengo una mejor idea de cómo empezar a crear mi página web.</p>
+        </article>
+        <article class="mensaje asistente">
+            <p>¡De nada! Si tienes más preguntas sobre HTML, CSS o cualquier otro tema relacionado, no dudes en preguntar. Estoy aquí para ayudarte.&#128591;&#128526;</p>
+        </article>
+    </section>
+</main>
+<footer>
+    <form action="#" method="post">
+        <label for="mensaje">&#128221;</label>
+        <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu pregunta..." required aria-required="true">
+        <button type="submit" aria-lavel="Enviar mensaje">
+            Enviar
+        </button>
+</footer>
+</body>
+</html>
