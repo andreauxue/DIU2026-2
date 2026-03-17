@@ -1,0 +1,2 @@
+Se utilizo IA para resolver dudas y generar la conversacion simulada. 
+No se utilizo para escribir codigo o crear el diseño.
