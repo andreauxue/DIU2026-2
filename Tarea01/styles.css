@@ -1,0 +1,137 @@
+/* Reset básico */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Tipografía general */
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+/* Contenedor general */
+
+.container {
+display: flex;
+flex-direction: column;
+height: 100vh;
+}
+
+/* Header */
+
+.header {
+background-color: #333;
+color: white;
+padding: 15px;
+}
+
+.title {
+font-size: 24px;
+}
+
+.description {
+font-size: 14px;
+}
+
+/* Layout principal */
+
+.layout {
+display: flex;
+flex: 1;
+}
+
+/* Sidebar */
+
+.sidebar {
+width: 250px;
+background-color: #e5e5e5;
+padding: 15px;
+}
+
+.conversation-list {
+list-style: none;
+}
+
+.conversation {
+background-color: white;
+padding: 8px;
+margin-bottom: 6px;
+border-radius: 4px;
+}
+
+/* Chat */
+
+.chat {
+flex: 1;
+padding: 20px;
+display: flex;
+flex-direction: column;
+background-color: white;
+}
+
+.messages {
+display: flex;
+flex-direction: column;
+gap: 10px;
+flex: 1;
+}
+
+/* Mensajes */
+
+.message {
+padding: 10px;
+border-radius: 8px;
+max-width: 60%;
+}
+
+/* Usuario */
+
+.user {
+align-self: flex-end;
+background-color: #3b82f6;
+color: white;
+}
+
+/* Asistente */
+
+.assistant {
+align-self: flex-start;
+background-color: #e5e7eb;
+}
+
+/* Footer */
+
+.footer {
+background-color: #f0f0f0;
+padding: 10px;
+}
+
+/* Formulario */
+
+.form {
+display: flex;
+gap: 10px;
+}
+
+.input {
+flex: 1;
+padding: 8px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+.button {
+padding: 8px 14px;
+background-color: #2563eb;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
