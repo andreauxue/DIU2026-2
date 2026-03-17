@@ -1,0 +1,10 @@
+Prompt usado:
+En HTML como seria el cambio de botones en la parte superior como si fueran una barra, 
+y que quedaran estilo carpeta , me refiero a la parte de conversaciones del Chat 
+
+- En este prompt no entendio lo que estaba buscando y solo me dio la version de los chat como botones, 
+para ser mas especifica le di una imagen de como lo visualizaba 
+
+Prompt usado:
+nop, una referencia es así como en la siguiente imagen, no le hagas caso a los colores,
+solo son una referencia, enfocate en que los botones queden de manera hozontal o como en una barra.
