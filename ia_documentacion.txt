@@ -1,0 +1,10 @@
+Documentación de uso de IA
+
+PROMPT UTILIZADO
+Ayúdame a crear una interfaz básica de chat usando HTML y CSS.
+
+RESULTADO GENERADO
+Se obtuvo un ejemplo de estructura HTML y estilos CSS para organizar la interfaz, del cual tomé una base.
+
+CAMBIOS REALIZADOS
+Implementé los requisitos necesarios para esta práctica y modifiqué el estilo a mi gusto.
