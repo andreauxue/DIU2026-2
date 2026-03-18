@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Asistente de DIU</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- NO ES SEMÁNTICO -->
-<!-- <div id="menu">Inicio</div> -->
-
-<!-- SI ES SEMÁNTICO -->
     <header>
         <h1>Asistente de DIU</h1>
+        <p id="contador">Mensajes en la conversación: 5</p>
     </header>
+
     <main role="main">
         <aside role="navigation">
             <h2>Conversaciones</h2>
@@ -27,34 +25,49 @@
                     <li>Chat sobre UX</li>
                 </ul>
             </nav>
+            <button id="limpiar-chat" type="button">Limpiar chat</button>
         </aside>
-        <section aria-label="Área de mensajes">
+
+        <section id="area-mensajes" aria-label="Área de mensajes">
             <article class="mensaje usuario">
                 <p>Cómo mejorar un formulario???</p>
             </article>
 
             <article class="mensaje asistente">
-                <p>Te recomiendo revisar contraste y jerarquía visual. 🌟:</p>
+                <p>Te recomiendo revisar contraste y jerarquía visual. 🌟</p>
             </article>
+
             <article class="mensaje usuario">
                 <p>Qué es html semántico?¡?</p>
             </article>
+
             <article class="mensaje asistente">
                 <p>Es HTML que tiene significado estructural. 😊</p>
             </article>
+
             <article class="mensaje usuario">
                 <p>Por qué tengo que usar label en los formularios?????</p>
             </article>
         </section>
     </main>
-    <footer> 
-        <form action="#" method="post">
+
+    <footer>
+        <form id="formulario-chat" action="#" method="post">
             <label for="mensaje">Mensaje</label>
-            <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required aria-required="true">
-            <button type="submit" aria-label="Enviar mnensaje">
+            <input
+                type="text"
+                id="mensaje"
+                name="mensaje"
+                placeholder="Escribe tu mensaje..."
+                required
+                aria-required="true"
+            >
+            <button type="submit" aria-label="Enviar mensaje">
                 Enviar
             </button>
         </form>
     </footer>
+
+    <script src="../JS/script.js"></script>
 </body>
 </html>
