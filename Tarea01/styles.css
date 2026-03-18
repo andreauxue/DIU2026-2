@@ -1,0 +1,92 @@
+/* reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* tipografía */
+body {
+    font-family: Arial;
+    background-color: white;
+}
+
+/* header */
+header {
+    background-color: rgba(152, 8, 8, 0.81);
+    color: white;
+    padding: 15px;
+}
+
+/* layout principal */
+main {
+    display: flex;              /* crear columnas */
+    height: 70vh;
+}
+
+/* sidebar */
+.sidebar {
+    width: 35%;
+    background-color: rgb(117, 16, 16);
+    padding: 35px;   
+}
+
+.sidebar li {
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgba(152, 8, 8, 0.81);
+}
+
+/* chat */
+.chat {
+    width: 65%;
+    padding: 20px;
+
+    display: flex;              /* flexbox */
+    flex-direction: column;     /* mensajes uno debajo de otro */
+    gap: 10px;                  /* espacio entre mensajes */
+}
+
+/* mensajes */
+article {
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 60%;
+}
+
+/* usuario */
+.usuario {
+    background-color: rgb(146, 145, 230);
+    align-self: flex-end;       /* mensaje a la derecha */
+}
+
+/* asistente */
+.asistente {
+    background-color: rgb(128, 180, 202);
+    align-self: flex-start;     /* mensaje a la izquierda */
+}
+
+/* footer */
+footer {
+    background-color: rgba(152, 8, 8, 0.81);
+    padding: 10px;
+}
+
+/* formulario */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+/* input */
+input {
+    flex: 1;
+    padding: 8px;
+}
+
+/* botón */
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
