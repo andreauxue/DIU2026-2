@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tareas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="tarjeta">
+      <h1>Lista de tareas</h1>
+      <p class="descripcion">Agrega, marca y elimina tareas.</p>
+
+      <div class="formulario">
+        <label for="inputTarea">Nueva tarea</label>
+        <div class="fila-input">
+          <input type="text" id="inputTarea" placeholder="Escribe una tarea...">
+          <button id="btnAgregar" type="button">Agregar</button>
+        </div>
+        <p id="mensajeError" class="mensaje-error"></p>
+      </div>
+
+      <p class="contador">Tareas totales: <span id="totalTareas">0</span></p>
+
+      <ul id="listaTareas" class="lista-tareas"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
