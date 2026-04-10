@@ -1,0 +1,33 @@
+Se utilizo GPT-5.3-Codex para definir el estilo de css.
+
+Prompt utilizado: Can you write a basic good looking dark themed css
+
+Resultado: 
+
+I’ll style the existing structure in your page with a clean dark theme (background, card layout, form controls, button states, and list items) so it looks polished without changing your HTML.
+
+Read `index.html`
+
+I found all the page elements, and next I’ll replace your CSS with a simple dark UI that keeps your strikethrough behavior and adds spacing, typography, and hover/focus states.
+
+Edited `styles.css +146 -0`
+
+I’ve applied the dark theme styles; I’ll quickly check for any file errors before I hand it over.
+
+Checked `styles.css` no problems found
+
+I replaced your CSS with a basic, clean dark theme in styles.css.
+
+What it now includes:
+- Dark gradient background with a centered layout
+- Card-style containers for form, counter, and task list
+- Better spacing, rounded corners, and subtle shadow
+- Styled input with focus ring
+- Accent button with hover/active states
+- Improved list-item appearance while keeping your click-to-strikethrough behavior
+- Mobile-friendly layout for small screens
+
+If you want, I can next add a tiny entrance animation for new tasks so they fade/slide in when added.
+
+
+Cambios realizados: El contenido del archivo styles.css
