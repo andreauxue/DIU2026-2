@@ -1,0 +1,241 @@
+Prompt:
+Ayudame y explicame a como se puede implementar la función render() en la clase Hora
+
+Resultado:
+La idea base
+
+Además del arreglo de mensajes, tu clase Chat necesita una propiedad booleana, por ejemplo:
+
+this.escribiendo = false;
+
+Esa variable representa el estado del indicador:
+
+false → no se muestra nada
+true → se muestra “El asistente está escribiendo...”
+
+Entonces, render() no “decide” por sí sola si debe mostrarlo o no.
+Solo lee el estado y pinta la interfaz según ese estado.
+
+Cómo se implementa en render()
+
+Tu render() primero reconstruye los mensajes del arreglo, y después revisa si chat.escribiendo es true.
+
+Un ejemplo sería así:
+
+function render() {
+  areaMensajes.innerHTML = "";
+
+  let htmlMensajes = "";
+
+  if (chat.mensajes.length === 0) {
+    htmlMensajes = `<p class="estado-vacio">No hay mensajes todavía.</p>`;
+  } else {
+    chat.mensajes.forEach((mensaje) => {
+      htmlMensajes += mensaje.render();
+    });
+  }
+
+  if (chat.escribiendo) {
+    htmlMensajes += `
+      <div class="indicador-escritura">
+        El asistente está escribiendo...
+      </div>
+    `;
+  }
+
+  areaMensajes.innerHTML = htmlMensajes;
+  contadorMensajes.textContent = chat.contarMensajes();
+  areaMensajes.scrollTop = areaMensajes.scrollHeight;
+}
+
+Cambios:
+function render() {
+  areaMensajes.innerHTML = "";
+
+  if (chat.mensajes.length === 0) {
+    areaMensajes.innerHTML = `<p class="estado-vacio"> Aun no hay mensajes.</p>`;
+  } else {
+    let htmlMensajes = "";
+
+    chat.mensajes.forEach((mensaje) => {
+      htmlMensajes += mensaje.render();
+    });
+
+    if (chat.escribiendo) {
+      htmlMensajes += `<div class="indicador-escritura">El asistente esta escribiendo...</div>`;
+    }
+
+    areaMensajes.innerHTML = htmlMensajes;
+  }
+
+  contadorMensajes.textContent = chat.contarMensajes();
+  areaMensajes.scrollTop = areaMensajes.scrollHeight;
+}
+
+
+Prompt: 
+Ayudame a agregar mas respuestas aqui:
+generarRespuestaAutomatica(textoUsuario) {
+    const texto = textoUsuario.toLowerCase();
+
+    if (texto.includes("hola")) {
+      return "¡Hola! ¿En qué puedo ayudarte hoy?";
+    }
+
+    if (texto.includes("tarea")) {
+      return "Recuerda organizar tu trabajo por pasos y validar cada funcionalidad.";
+    }
+
+    if (texto.includes("gracias")) {
+      return "¡De nada! Estoy para ayudarte.";
+    }
+
+    if (texto.includes("adiós") || texto.includes("adios")) {
+      return "¡Hasta luego! Éxito con tu tarea.";
+    }
+
+    return "Mensaje Guardado.";
+  }
+
+Resultado:
+generarRespuestaAutomatica(textoUsuario) {
+  const texto = textoUsuario.toLowerCase().trim();
+
+  if (texto.includes("hola") || texto.includes("buenas") || texto.includes("qué tal") || texto.includes("que tal")) {
+    return "¡Hola! ¿En qué puedo ayudarte hoy?";
+  }
+
+  if (texto.includes("como estas") || texto.includes("cómo estás")) {
+    return "Estoy muy bien, gracias por preguntar. ¿Y tú?";
+  }
+
+  if (texto.includes("tarea") || texto.includes("trabajo")) {
+    return "Recuerda organizar tu trabajo por pasos y validar cada funcionalidad.";
+  }
+
+  if (texto.includes("javascript") || texto.includes("js")) {
+    return "JavaScript permite agregar interactividad a la interfaz y manipular el comportamiento del sistema.";
+  }
+
+  if (texto.includes("html")) {
+    return "HTML se encarga de la estructura del contenido en la página.";
+  }
+
+  if (texto.includes("css")) {
+    return "CSS se usa para dar estilo, color y distribución visual a los elementos.";
+  }
+
+  if (texto.includes("dom")) {
+    return "El DOM representa la estructura de la página y permite modificarla con JavaScript.";
+  }
+
+  if (texto.includes("render")) {
+    return "Renderizar significa reconstruir la interfaz a partir del estado actual del sistema.";
+  }
+
+  if (texto.includes("mensaje") || texto.includes("mensajes")) {
+    return "Cada mensaje debe guardarse en el arreglo principal para que el estado sea la fuente de verdad.";
+  }
+
+  if (texto.includes("contador")) {
+    return "El contador debe actualizarse dinámicamente cada vez que cambia el estado del chat.";
+  }
+
+  if (texto.includes("limpiar")) {
+    return "El botón limpiar debe vaciar el arreglo de mensajes y volver a renderizar la interfaz.";
+  }
+
+  if (texto.includes("poo") || texto.includes("objetos") || texto.includes("clase")) {
+    return "La programación orientada a objetos ayuda a organizar mejor el código mediante clases y métodos.";
+  }
+
+  if (texto.includes("error") || texto.includes("problema")) {
+    return "Si algo falla, conviene revisar primero la conexión entre HTML, CSS y JavaScript.";
+  }
+
+  if (texto.includes("ayuda")) {
+    return "Claro, dime qué parte necesitas resolver y te apoyo paso a paso.";
+  }
+
+  if (texto.includes("gracias")) {
+    return "¡De nada! Estoy para ayudarte.";
+  }
+
+  if (texto.includes("adiós") || texto.includes("adios") || texto.includes("bye")) {
+    return "¡Hasta luego! Éxito con tu tarea.";
+  }
+
+  return "Mensaje guardado. El asistente ha recibido tu texto.";
+}
+
+Cambios:
+generarRespuestaAutomatica(textoUsuario) {
+  const texto = textoUsuario.toLowerCase().trim();
+
+  if (texto.includes("hola") || texto.includes("buenas") || texto.includes("qué tal") || texto.includes("que tal")) {
+    return "¡Hola! ¿En qué puedo ayudarte hoy?";
+  }
+
+  if (texto.includes("como estas") || texto.includes("cómo estás")) {
+    return "Estoy muy bien, gracias por preguntar. ¿Y tú?";
+  }
+
+  if (texto.includes("tarea") || texto.includes("trabajo")) {
+    return "Recuerda organizar tu trabajo por pasos y validar cada funcionalidad.";
+  }
+
+  if (texto.includes("javascript") || texto.includes("js")) {
+    return "JavaScript permite agregar interactividad a la interfaz y manipular el comportamiento del sistema.";
+  }
+
+  if (texto.includes("html")) {
+    return "HTML se encarga de la estructura del contenido en la página.";
+  }
+
+  if (texto.includes("css")) {
+    return "CSS se usa para dar estilo, color y distribución visual a los elementos.";
+  }
+
+  if (texto.includes("dom")) {
+    return "El DOM representa la estructura de la página y permite modificarla con JavaScript.";
+  }
+
+  if (texto.includes("render")) {
+    return "Renderizar significa reconstruir la interfaz a partir del estado actual del sistema.";
+  }
+
+  if (texto.includes("mensaje") || texto.includes("mensajes")) {
+    return "Cada mensaje debe guardarse en el arreglo principal para que el estado sea la fuente de verdad.";
+  }
+
+  if (texto.includes("contador")) {
+    return "El contador debe actualizarse dinámicamente cada vez que cambia el estado del chat.";
+  }
+
+  if (texto.includes("limpiar")) {
+    return "El botón limpiar debe vaciar el arreglo de mensajes y volver a renderizar la interfaz.";
+  }
+
+  if (texto.includes("poo") || texto.includes("objetos") || texto.includes("clase")) {
+    return "La programación orientada a objetos ayuda a organizar mejor el código mediante clases y métodos.";
+  }
+
+  if (texto.includes("error") || texto.includes("problema")) {
+    return "Si algo falla, conviene revisar primero la conexión entre HTML, CSS y JavaScript.";
+  }
+
+  if (texto.includes("ayuda")) {
+    return "Claro, dime qué parte necesitas resolver y te apoyo paso a paso.";
+  }
+
+  if (texto.includes("gracias")) {
+    return "¡De nada! Estoy para ayudarte.";
+  }
+
+  if (texto.includes("adiós") || texto.includes("adios") || texto.includes("bye")) {
+    return "¡Hasta luego! Éxito con tu tarea.";
+  }
+
+  return "Mensaje guardado. El asistente ha recibido tu texto.";
+}
+
