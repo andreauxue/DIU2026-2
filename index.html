@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant - POO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>DIUI Assistant Pro v2</h1>
+        <p>Tu asistente virtual ahora con estado y POO.</p>
+        <div class="chat-stats">
+            <span>Mensajes: <strong id="contador-msg">0</strong></span>
+            <button id="btn-limpiar" aria-label="Limpiar chat">Limpiar Chat</button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="sidebar">
+            <h2>Chats Recientes</h2>
+            <ul>
+                <li><a href="#" class="active">Práctica JS POO</a></li>
+                <li><a href="#">Proyecto DiVago</a></li>
+                <li><a href="#">Prácticas en Rocky Linux</a></li>
+            </ul>
+        </nav>
+
+        <section class="chat-container" id="area-chat">
+            </section>
+    </main>
+
+    <footer>
+        <div id="indicador-escribiendo" class="oculto">El asistente está escribiendo...</div>
+        <form class="message-form" id="formulario-chat">
+            <label for="chat-input" class="visually-hidden">Escribe tu mensaje:</label>
+            <input type="text" id="chat-input" name="chat-input" placeholder="Escribe un mensaje aquí..." required autocomplete="off">
+            <button type="submit" aria-label="Enviar mensaje">Enviar</button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

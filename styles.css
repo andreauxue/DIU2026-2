@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #0B0E14;
+    --bg-panel: #151A22;
+    --text-main: #E2E8F0;
+    --accent: #00E5FF;
+    --user-bg: #1A365D;
+    --user-border: #00E5FF;
+    --ai-bg: #1F2937;
+    --ai-border: #4B5563;
+    --glow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--bg-panel);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+    box-shadow: var(--glow);
+}
+
+header h1 {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #64748B;
+    font-size: 0.9rem;
+}
+
+.chat-stats {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #94A3B8;
+}
+
+#btn-limpiar {
+    background: transparent;
+    color: #EF4444;
+    border: 1px solid #EF4444;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#btn-limpiar:hover {
+    background: #EF4444;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-panel);
+    border-right: 1px solid #1E293B;
+    padding: 1.5rem;
+}
+
+.sidebar h2 {
+    color: #64748B;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: var(--text-main);
+    display: block;
+    padding: 10px;
+    border-left: 3px solid transparent;
+    background: #1E293B;
+    transition: 0.3s;
+}
+
+.sidebar li a:hover, .sidebar li a.active {
+    border-left-color: var(--accent);
+    background: #233147;
+}
+
+.chat-container {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    background: radial-gradient(circle at center, #111827 0%, #0B0E14 100%);
+}
+
+.mensaje {
+    max-width: 65%;
+    padding: 15px 20px;
+    border-radius: 4px;
+    line-height: 1.5;
+    position: relative;
+}
+
+.msg-user {
+    align-self: flex-end;
+    background-color: var(--user-bg);
+    border-right: 3px solid var(--user-border);
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.msg-ai {
+    align-self: flex-start;
+    background-color: var(--ai-bg);
+    border-left: 3px solid var(--ai-border);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.hora-msg {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748B;
+    margin-top: 8px;
+    text-align: right;
+}
+
+footer {
+    background-color: var(--bg-panel);
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #1E293B;
+}
+
+#indicador-escribiendo {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    height: 20px;
+    font-family: monospace;
+}
+
+.oculto {
+    visibility: hidden;
+}
+
+.message-form {
+    display: flex;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #334155;
+    background-color: #0F172A;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+#chat-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
+}
+
+button[type="submit"] {
+    padding: 0 30px;
+    background-color: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+    box-shadow: var(--glow);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
