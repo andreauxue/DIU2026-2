@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Chat JS + POO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="chat-card">
+      <header class="chat-header">
+        <div>
+          <h1>Chat Asistente</h1>
+          <p>Estado + render + POO</p>
+        </div>
+        <button id="clear-btn" class="danger-btn" type="button">Limpiar chat</button>
+      </header>
+
+      <section class="chat-info">
+        <span>Total de mensajes: <strong id="message-count">0</strong></span>
+      </section>
+
+      <section id="messages" class="messages" aria-live="polite"></section>
+
+      <form id="chat-form" class="chat-form">
+        <input
+          id="message-input"
+          type="text"
+          placeholder="Escribe un mensaje..."
+          autocomplete="off"
+          maxlength="200"
+          required
+        />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
