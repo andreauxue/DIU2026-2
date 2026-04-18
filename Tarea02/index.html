@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>DIUI Assistant</h1>
+        <p>Asistente de chat para resolver dudas y conversar.</p>
+    </header>
+
+    <main class="layout-principal">
+        <aside class="sidebar">
+            <nav>
+                <h2>Conversaciones</h2>
+                <ul>
+                    <li>Chat General</li>
+                    <li>Soporte Técnico</li>
+                    <li>Proyecto Web</li>
+                </ul>
+            </nav>
+
+            <section class="panel-info">
+                <p><strong>Total de mensajes:</strong> <span id="contador-mensajes">0</span></p>
+                <button id="btn-limpiar" type="button">Limpiar chat</button>
+            </section>
+        </aside>
+
+        <section class="chat-panel">
+            <div id="area-mensajes" class="chat" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <form id="form-chat" class="form-chat">
+            <label for="mensaje" class="sr-only">Escribe tu mensaje</label>
+            <input type="text" id="mensaje" name="mensaje" placeholder="Escribe aquí..." autocomplete="off">
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
