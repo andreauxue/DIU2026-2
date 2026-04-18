@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+/* CONTENEDOR CHAT */
+#chat {
+    height: 400px;
+    overflow-y: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENSAJES */
+.message {
+    display: flex;
+    margin: 8px 0;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.assistant {
+    justify-content: flex-start;
+}
+
+/* BURBUJAS */
+.bubble {
+    padding: 10px 14px;
+    border-radius: 15px;
+    max-width: 65%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* USUARIO (color original pero distinto al ejemplo) */
+.user .bubble {
+    background: #6c63ff;
+    color: white;
+    border-radius: 15px 5px 15px 15px;
+}
+
+/* ASISTENTE */
+.assistant .bubble {
+    background: #e4e6eb;
+    color: #333;
+}
+
+/* HORA */
+.hora {
+    font-size: 10px;
+    display: block;
+    margin-top: 5px;
+    opacity: 0.6;
+}
+
+/* INPUT */
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5146d8;
+}
