@@ -1,45 +1,69 @@
 Uso de IA — Documentación
 
-Inicié con una versión básica de un index.html y styles.css donde definí el header, la barra lataeral 
-con nav y ul, la sección principal del chat y el formulario del footer.
+Para esta tarea primero implementé la estructura básica del sistema usando JavaScript.
+Ya tenía un arreglo para guardar mensajes y estaba agregando elementos directamente
+al DOM.
 
-Ya luego con gpt completé y corregí todo lo demás.
+Después empecé a adaptar el código para usar clases (Mensaje y Chat) y separar mejor
+la lógica del render.
+
 
 ------------------------------------------------
 
 Prompt 1:
 
-"Tengo un layout con sidebar y chat pero no se acomodan bien.
-Quiero que el sidebar quede a la izquierda y el chat ocupe lo demás.
-
-Estoy usando flex pero no sé qué me falta."
+"Estoy guardando mensajes en un arreglo pero sigo manipulando el DOM directamente.
+¿Cómo puedo hacer un render general que reconstruya todo desde el estado?"
 
 Respuesta:
 
-La IA sugirió asegurar que el contenedor principal tenga display:flex
-y darle un ancho fijo al sidebar para que el chat pueda ocupar el resto.
+Se sugirió crear una función render() que limpie el contenedor y recorra
+el arreglo de mensajes para generar nuevamente el HTML.
 
 Cambios realizados:
 
-Le puso un tamaño fijo al sidebar con width y dejé que el chat usara flex:1, es decir el resto.
+Se dejó de usar appendChild directamente y se centralizó todo en la función render().
 
 
 ------------------------------------------------
 
 Prompt 2:
 
-"Los mensajes de mi chat ocupan todo el ancho y se ve raro.
-Quiero que se vean como burbujas tipo chat y que el usuario quede a la derecha
-y el asistente a la izquierda."
+"Ya tengo una clase Mensaje pero no sé bien qué debería regresar en el render().
+¿Debe regresar un string o un elemento?"
 
 Respuesta:
 
-Se recomendó limitar el ancho de los mensajes y usar align-self para
-alinearlos dependiendo de la clase.
+Se recomendó que el método render() regrese un string con el HTML del mensaje.
 
 Cambios realizados:
 
-Agregó max-width de 60% a los mensajes y clases separadas para usuario
-y asistente.
+El método render() ahora devuelve un template string con la estructura del mensaje.
 
 
+------------------------------------------------
+
+Prompt 3:
+
+"Quiero simular que el asistente responde después de un tiempo y que aparezca
+algo como 'escribiendo...'. ¿Cómo lo puedo hacer sencillo?"
+
+Respuesta:
+
+Se sugirió usar setTimeout para agregar primero un mensaje temporal y luego
+la respuesta final.
+
+Cambios realizados:
+
+Se agregaron dos setTimeout para simular el comportamiento del asistente.
+
+
+------------------------------------------------
+
+Problemas encontrados:
+
+Al inicio seguía manipulando el DOM directamente en varias partes, lo cual
+no cumplía con el flujo Estado → Render → Interfaz.
+
+Después de reorganizar el código, todo el render se centralizó y el
+comportamiento fue más predecible.

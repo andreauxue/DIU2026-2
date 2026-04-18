@@ -13,6 +13,7 @@
 <header>
     <h1>DIUI Assistant</h1>
     <p>Asistente de conversación para resolver dudas prácticas. En este chat te puede ayudar incluso a reparar tu bicicleta.</p>
+    <p id="contador">Mensajes: 0</p>
 </header>
 
 <main>
@@ -25,49 +26,20 @@
             <li>Ideas de diseño</li>
             <li>Dudas UI</li>
         </ul>
+        <button id="limpiar">Limpiar chat</button>
     </nav>
 
-    <section class="chat">
-
-        <article class="mensaje usuario">
-            <p>Se me ponchó la llanta de mi bicicleta. ¿Cómo la puedo reparar?</p>
-        </article>
-
-        <article class="mensaje asistente">
-            <p>Primero debes retirar la rueda de la bicicleta y sacar la cámara del neumático usando palancas o una herramienta similar.</p>
-        </article>
-
-        <article class="mensaje usuario">
-            <p>¿Cómo encuentro exactamente dónde está la ponchadura?</p>
-        </article>
-
-        <article class="mensaje asistente">
-            <p>Puedes inflar un poco la cámara y sumergirla en agua. Las burbujas te indicarán el lugar donde está el agujero.</p>
-        </article>
-
-        <article class="mensaje usuario">
-            <p>Ya encontré el agujero, ¿qué sigue?</p>
-        </article>
-
-        <article class="mensaje asistente">
-            <p>Lija ligeramente la zona, aplica pegamento para parches, coloca el parche y presiónalo durante unos minutos. Después vuelve a montar la cámara y el neumático.</p>
-        </article>
-
+    <section class="chat" id="chat">
+        <!-- ya no tengo que poner los mensajes porque ya se renderizan con el script-->
     </section>
 
 </main>
 
 <footer>
 
-<form>
+<form id="formulario">
     <label for="mensaje">Mensaje:</label>
-    <input 
-        type="text"
-        id="mensaje"
-        name="mensaje"
-        placeholder="Escribe tu mensaje..."
-        required
-    >
+    <input type="text" id="mensaje" required>
 
     <button type="submit" aria-label="Enviar mensaje">
         Enviar
@@ -75,6 +47,6 @@
 </form>
 
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
