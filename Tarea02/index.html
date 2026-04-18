@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIUI Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>DIUI Assistant</h1>
+    <p>Tu asistente de conversación personal</p>
+  </header>
+
+  <main class="main-layout">
+
+    <aside class="sidebar">
+      <h2>Conversaciones</h2>
+      <nav aria-label="Lista de conversaciones">
+        <ul class="conversation-list">
+          <li class="active">Sesión actual</li>
+          <li>Consulta anterior</li>
+          <li>Soporte técnico</li>
+          <li>Revisión de tarea</li>
+          <li>Otra consulta</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="chat-panel">
+
+      <!-- Barra superior con contador y botón limpiar -->
+      <div class="chat-toolbar">
+        <span id="message-counter">0 mensajes</span>
+        <button id="clear-btn" class="clear-btn">Limpiar chat</button>
+      </div>
+
+      <!-- Aquí el JS va a insertar los mensajes -->
+      <div class="chat-messages" id="chat-messages"></div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <form class="message-form" action="#" method="post" onsubmit="return false;">
+      <label for="user-input">Mensaje:</label>
+      <input
+        type="text"
+        id="user-input"
+        class="message-input"
+        placeholder="Escribe tu mensaje aquí..."
+        autocomplete="off"
+      />
+      <button type="submit" id="send-btn" class="send-btn" aria-label="Enviar mensaje">
+        Enviar
+      </button>
+    </form>
+  </footer>
+
+  <!-- Conectar el script AL FINAL del body -->
+  <script src="script.js"></script>
+</body>
+</html>
