@@ -223,6 +223,53 @@ button:hover {
     background-color: var(--color-primary-dark);
 }
 
+.hora-mensaje {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 6px;
+    opacity: 0.7;
+    text-align: right;
+}
+
+.escribiendo{
+    font-style: italic;
+    color: var(--color-text-light);
+    animation: pulso 1.5s infinite;
+}
+
+.chat-controls {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-secondary);
+}
+
+#message-counter {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--color-text-light);
+}
+
+#clear-chat-btn {
+    width: 100%;
+    background-color: #d9534f; /* Color rojo para acción destructiva */
+}
+
+#clear-chat-btn:hover {
+    background-color: #c9302c; /* Un rojo más oscuro al pasar el cursor */
+}
+
+@keyframes pulso {
+    0% {opacity: 0.4;}
+    50%{opacity: 1;}
+    100%{opacity: 0.4;}
+}
+
+.mensaje-contenido {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
