@@ -4,62 +4,6 @@ const areaMensajes = document.getElementById("area-mensajes")
 const contadorMensajes = document.getElementById("contador")
 const botonLimpiar = document.getElementById("limpiar-chat")
 
-
-class Mensaje {
-    constructor(tipo, texto, hora) {
-        this.tipo = tipo;
-        this.texto = texto;
-        this.hora = hora;
-    }
-
-    render() {
-        // TODO: Construye y devuelve el HTML del mensaje
-    }
-}
-
-class Chat {
-    constructor() {
-        this.mensajes = [];
-        this.contador = 0
-    }
-
-    agregarMensaje(mensaje) {
-        this.mensajes.push(mensaje);
-        this.contador += 1
-    }
-
-    limpiaConversacion() {
-        this.mensajes = [];
-        this.contador = 0
-    }
-
-
-}
-
-function render() {
-    // TODO: 1. Limpia e area de mensajes.
-    // 2. Recorre el estado.
-    // 3. Reconstruye toda la interfaz.
-}
-
-
-let historialMensajes = [
-    { tipo: "usuario", mensaje: "Como mejorar un formulario???", hora: obtenerHoraActual() },
-    { tipo: "asistente", mensaje: "Te recomiendo revisar contraste y jerarquia", hora: obtenerHoraActual() },
-    { tipo: "usuario", mensaje: "Que es html semantico?!?", hora: obtenerHoraActual() },
-    { tipo: "asistente", mensaje: "Es HTML que tiene significado estructural. :)", hora: obtenerHoraActual() },
-    { tipo: "usuario", mensaje: "Por que tengo que usar label en los formularios!!1???", hora: obtenerHoraActual() },
-];
-
-const respuestasAsistente = [
-    "Interesante pregunta sobre diseño de interfaces!",
-    "Recuerda cuidar la jerarquia visual y el contraste.",
-    "Piensa primero en la experiencia de usuario.",
-    "Te recomiendo revisar la accesibilidad del formulario.",
-    "Podrias mejorar el diseño usando HTML semantico."
-];
-
-
 function obtenerHoraActual() {
     const ahora = new Date();
     let horas = ahora.getHours();
@@ -72,99 +16,138 @@ function obtenerHoraActual() {
     return `${horas}:${minutos}`;
 }
 
-function actualizarContador() {
-    contadorMensajes.textContent = `Mensajes en la conversación: ${historialMensajes.length}`;
-}
+class Mensaje {
+    constructor(tipo, texto, hora = obtenerHoraActual()) {
+        this.tipo = tipo;
+        this.texto = texto;
+        this.hora = hora;
+    }
 
-function agregarMensajeAlChat(tipo, texto, hora) {
-    const article = document.createElement("article");
-    article.classList.add("mensaje");
-    article.classList.add(tipo);
+    render() {
+        const article = document.createElement("article");
+        article.classList.add("mensaje");
+        article.classList.add(this.tipo);
 
-    const parrafo = document.createElement("p");
-    parrafo.textContent = texto
+        const parrafo = document.createElement("p");
+        parrafo.textContent = this.texto
 
-    const small = document.createElement("small");
-    small.textContent = hora;
+        const small = document.createElement("small");
+        small.textContent = this.hora;
 
-    article.appendChild(parrafo);
-    article.appendChild(small);
+        article.appendChild(parrafo);
+        article.appendChild(small);
 
-    insertarMensaje(article);
-
-    areaMensajes.scrollTop = areaMensajes.scrollHeight;
-}
-
-function insertarMensaje(nodo) {
-    const footer = areaMensajes.querySelector("footer");
-    if (footer) {
-        areaMensajes.insertBefore(nodo, footer);
-    } else {
-        areaMensajes.appendChild(nodo);
+        return article;
     }
 }
+
+class Chat {
+    constructor(mensajes = []) {
+        this.historialDeMensajes = mensajes;
+        this.asistenteEscribiendo = false;
+    }
+
+    agregarMensaje(mensaje) {
+        this.historialDeMensajes.push(mensaje);
+    }
+
+    limpiarConversacion() {
+        this.historialDeMensajes = [];
+        this.asistenteEscribiendo = false;
+    }
+
+    get contador() {
+        return this.historialDeMensajes.length;
+    }
+
+}
+
+const chat = new Chat([
+    new Mensaje("usuario", "Estoy diseñando una pagina de inicio y no se por donde empezar."),
+    new Mensaje("asistente", "Empieza por definir objetivo, publico y accion principal que quieres lograr."),
+    new Mensaje("usuario", "Como organizo mejor la informacion en pantalla?"),
+    new Mensaje("asistente", "Usa jerarquia visual: titulo claro, secciones cortas y un CTA visible."),
+    new Mensaje("usuario", "Que tipografia me recomiendas para una app educativa?")
+]);
+
+const respuestasAsistente = [
+    "Elige una fuente legible, buen interlineado y maximo dos familias tipograficas.",
+    "Sobrecargar la pantalla. Prioriza contenido y deja suficiente espacio tactil.",
+    "Buena observacion. Piensa primero en la tarea principal del usuario.",
+    "Prueba con menos elementos por pantalla y una jerarquia mas clara.",
+    "Verifica contraste, tamano de fuente y estados de foco para accesibilidad.",
+    "Recuerda mantener consistencia en botones, colores y espaciados.",
+    "Haz una prueba rapida con usuarios para validar si el flujo se entiende.",
+    "Un buen diseño no solo se ve bien: tambien se entiende rapido.",
+    "Si dudas entre dos opciones, elige la que reduzca pasos al usuario.",
+    "Empieza simple, mide resultados y luego itera con mejoras pequeñas."
+];
 
 function obtenerRespuestaAleatoria() {
     const indice = Math.floor(Math.random() * respuestasAsistente.length);
-
     return respuestasAsistente[indice];
 }
 
-function mostrarIndicadorEscribiendo() {
-    const article = document.createElement("article");
-    article.classList.add("mensaje", "asistente");
-    article.setAttribute("id", "indicador-escribiendo");
+function render() {
+    // Inserta mensaje
+    const footer = areaMensajes.querySelector("footer");
+    areaMensajes.querySelectorAll(".mensaje").forEach((nodo) => nodo.remove());
 
-    const parrafo = document.createElement("p");
-    parrafo.textContent = "Asistente esta escribiendo...";
+    chat.historialDeMensajes.forEach((mensaje) => {
+        const nodoMensaje = mensaje.render();
+        if (footer) {
+            areaMensajes.insertBefore(nodoMensaje, footer);
+        } else {
+            areaMensajes.appendChild(nodoMensaje);
+        }
+    });
 
-    article.appendChild(parrafo);
-    insertarMensaje(article);
+    if (chat.asistenteEscribiendo) {
+        const indicador = document.createElement("article");
+        indicador.classList.add("mensaje", "asistente");
 
-    areaMensajes.scrollTop = areaMensajes.scrollHeight;
-}
+        const texto = document.createElement("p");
+        texto.textContent = "El asistente esta escribiendo...";
 
-function quitarIndicadorEscribiendo() {
-    const indicador = document.getElementById("indicador-escribiendo");
-    if (indicador) {
-        indicador.remove();
+        indicador.appendChild(texto);
+
+        if (footer) {
+            areaMensajes.insertBefore(indicador, footer);
+        } else {
+            areaMensajes.appendChild(indicador);
+        }
     }
+    // Actualiza el contador
+    contadorMensajes.textContent = `Mensajes en la conversación: ${chat.contador}`;
+    areaMensajes.scrollTop = areaMensajes.scrollHeight;
 }
 
 formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
+    
     const textoUsuario = inputMensaje.value.trim();
     if (textoUsuario == "") {
         return;
     }
-    const hora = obtenerHoraActual();
-    historialMensajes.push({ tipo: "usuario", texto: textoUsuario, hora: hora });
 
-    agregarMensajeAlChat("usuario", textoUsuario, hora);
-
-    actualizarContador();
+    chat.agregarMensaje(new Mensaje("usuario", textoUsuario))
+    chat.asistenteEscribiendo = true;
+    render();
 
     inputMensaje.value = "";
-
     inputMensaje.focus();
 
-    mostrarIndicadorEscribiendo();
-
     setTimeout(() => {
-        quitarIndicadorEscribiendo();
-        const respuesta = obtenerRespuestaAleatoria();
-        const horaRespuesta = obtenerHoraActual();
-
-        historialMensajes.push({ tipo: "asistente", texto: respuesta, hora: horaRespuesta });
-
-        agregarMensajeAlChat("asistente", respuesta, horaRespuesta);
-        actualizarContador();
+        chat.asistenteEscribiendo = false;
+        chat.agregarMensaje(new Mensaje("asistente", obtenerRespuestaAleatoria()));
+        render();
     }, 1500);
 });
 
 
 botonLimpiar.addEventListener("click", () => {
-    areaMensajes.querySelectorAll(".mensaje").forEach((n) => n.remove());
-    historialMensajes = []
-    actualizarContador();
+    chat.limpiarConversacion();
+    render();
 });
+
+render();
