@@ -1,0 +1,13 @@
+La IA se usó principalmente para generar el texto de la conversación, inicialmente se le dio especificaciones de como tenía que comportarse Fluxy: “Te voy a dar especificaciones de cómo es que se tiene que comportar el chat bot en el que estoy trabajando:
+- Tiene que ser empático
+- Tiene que ser colaborativo
+- Tiene que verse como un experto, pero al mismo tiempo tratar de evitar tecnicismos
+- Tiene que generar un ambiente de confianza
+- Al dar críticas constructivas no tiene que usar un lenguaje duro o agresivo con el usuario”
+
+Se dieron ejemplos para que entendiera mejor cómo es que en teoría debería de contestar Fluxy, por lo que para finalizar se le pidió que nos ayudara a generar una conversación en donde simulara que fuera Fluxy contestando al usuario y los resultados fueron los que se usaron en el ejemplo del chat (5 mensajes del usuario y 5 mensajes del chat bot)
+
+
+Posteriormente se usó´en la parte de "Arquitectura de la interfaz" en el apartado Estados del sistema, se le mostró a la IA el frame y s le pidió que indicara a qué estados del sistema se referia: "En mi pantalla (captura) tengo estos elementos ¿Los estados serían el conjunto de Estado vacío, escribiendo y de error o que a nos referimos cuando se pregunta los estados del sistama? "
+Nos dio una explicación delc por qué si eran esos los estados del sistema y fueron los que se usaron 
+como base para lo que se puso en ese apartado
