@@ -1,0 +1,93 @@
+Prompt: I cant write the <> in my sidebar because it is confusing it with a tag, how can i escape them?
+<ul>
+                <li><> Chat 1</li>
+                <li><> Chat 2</li>
+                <li><> Chat 3</li>
+                <li><> Chat 4</li>
+            </ul>
+Respuesta: You have to use the specific codes for < and > respectively:
+<ul>
+                <li>&lt;&gt; Chat 1</li>
+                <li>&lt;&gt; Chat 2</li>
+                <li>&lt;&gt; Chat 3</li>
+                <li>&lt;&gt; Chat 4</li>
+            </ul>
+Cambios:
+    Se adaptó a la versión recibida.
+
+Prompt: 
+When I send messages, the view gets stuck at the current place and doesnt show the newest messages unless I scroll. Previously, this was handled with a scroll.
+function ChatArea({ mensajes, escribiendo }) {
+    return (
+        <section ref={seccionRef}>
+            {mensajes.map((msg) => (
+                <Message key={msg.id} tipo={msg.tipo} texto={msg.texto} hora={msg.hora} />
+            ))}
+            {escribiendo ? <p className="escribiendo">El asistente está escribiendo…</p> : null}
+        </section>
+    );
+
+}
+Respuesta:
+useRef(null)
+Creates a "reference" to a DOM element. Think of it as a variable that holds a direct pointer to the real <section>
+useEffect runs code after React finishes rendering. The second argument [mensajes, escribiendo] is the dependency array — it means "only re-run this effect when mensajes or escribiendo changes."
+So every time a new message is added or the typing indicator appears/disappears, it runs it.
+
+
+function ChatArea({ mensajes, escribiendo }) {
+    const seccionRef = useRef(null);
+
+    useEffect(() => {
+        if (seccionRef.current) {
+            seccionRef.current.scrollTop = seccionRef.current.scrollHeight;
+        }
+    }, [mensajes, escribiendo]);
+
+    return (
+        <section ref={seccionRef}>
+            {mensajes.map((msg) => (
+                <Message key={msg.id} tipo={msg.tipo} texto={msg.texto} hora={msg.hora} />
+            ))}
+            {escribiendo ? <p className="escribiendo">El asistente está escribiendo…</p> : null}
+        </section>
+    );
+
+}
+
+const seccionRef = useRef(null);
+
+    useEffect(() => {
+        if (seccionRef.current) {
+            seccionRef.current.scrollTop = seccionRef.current.scrollHeight;
+        }
+    }, [mensajes, escribiendo]);
+Cambios:
+
+se agregaron estas lineas y la app ya se mueve al mensaje más nuevo
+
+
+Prompt: Why do I get the warning: Warning: Each child in a list should have a unique "key" prop.
+Respuesta: If messages have internal state — for example if <Message> had its own useState (like an expanded/collapsed toggle), React could assign the old component's state to the wrong new message after a reorder.
+For your chat specifically, since you only ever add to the end of the list and never reorder or delete individual messages, you'd likely never notice a visual bug. But it's still bad practice, and React warns you for exactly those edge cases where it would break.
+{mensajes.map((msg) => (
+    <Message key={msg.id} ... />
+))}
+Loops over every message in the array and renders a <Message> component for each one. key is required by React to efficiently track which items changed.
+Cambios:
+Se agrgeó el key y la warning desapareció.
+
+
+Prompt:  The nav bar, footer all start growing vertically as I send messages. They start small and as I send messages they start filling the screen.
+Respuesta: the layout starts too small and grows as messages are added, meaning the body or main isn't actually filling the full viewport from the start.
+Check your index.html — the root div likely has no height set:
+<div id="root"></div>
+React mounts into #root, but that div has no height, so your body { height: 100vh } chain breaks because #root itself collapses. Add this to your CSS:
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+Cambios:
+Se agrego lo mencionado a los estilos y se muestra de manera correcta.
+

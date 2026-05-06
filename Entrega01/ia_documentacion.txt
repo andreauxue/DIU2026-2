@@ -1,6 +1,0 @@
-1. Prompt> Genera iconos para un usuario con tematica de wall/e o parecidos.
-resultado: se generaron dos iconos para los usuario que utilizamos para marcar los perfiles de los usuarios.
-
-2. Prompt> Acomoda el contenido del latex para que sea consistente y tenga buen formato. No cambies el contenido del mismo. <Se Adjunto el codigo .tex>
-resultado: Se generó el .tex con formato más consistente aunque habían un par de errores de compilación principalmente con símbolos que faltaban por escapar.
-Cambio: Se aplicó el formato del nuevo archivo pero con los cambios correspondientes para su compilación.
