@@ -1,8 +1,0 @@
-Prompt utilizado:
-Le solicité a la inteligencia artificial sugerencias para optimizar la hoja de estilos de un chat en HTML. Específicamente, pedí que me explicara cómo distribuir la barra lateral y los mensajes usando Flexbox, además de cómo darle una apariencia moderna y distinta a las burbujas del usuario y del bot.
-
-Resultado generado:
-La IA devolvió un conjunto de reglas CSS que aplicaban un restablecimiento de márgenes por defecto. También proporcionó un sistema de diseño con Flexbox para estructurar toda la pantalla y asignó selectores de clase únicos para diferenciar visualmente quién envía cada mensaje, además de un diseño básico para el formulario de la parte inferior.
-
-Cambios realizados:
-Adapté el código recibido cambiando los nombres de las clases para que hicieran match con mis etiquetas HTML semánticas. Además, descarté los colores básicos sugeridos y personalicé la paleta implementando un modo oscuro (Dark Mode). Finalmente, ajusté las medidas, los bordes redondeados y depuré el CSS para que el código fuera más limpio y cumpliera al cien por ciento con los requisitos de diseño estipulados en la tarea.
