@@ -1,0 +1,224 @@
+/* reset básico */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* estilo general */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f7;
+  color: #1f2937;
+}
+
+/* estructura principal */
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+
+header {
+  background: #1e3a5f;
+  color: white;
+  padding: 20px;
+  border-bottom: 3px solid #4da3ff;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  margin-top: 4px;
+}
+
+/* layout */
+
+.layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* sidebar */
+
+.sidebar {
+  width: 240px;
+  background: #2d4b6b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.sidebar ul {
+  list-style: none;
+  flex: 1;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* botón limpiar */
+
+.sidebar button {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: #ff5d5d;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+
+.sidebar button:hover {
+  background: #e04848;
+}
+
+/* área chat */
+
+.chat {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  background: #f7f9fc;
+}
+
+/* mensajes */
+
+.mensaje {
+  max-width: 65%;
+  padding: 12px;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.mensaje p {
+  margin-bottom: 6px;
+}
+
+.mensaje small {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* usuario */
+
+.usuario {
+  align-self: flex-end;
+  background: #4da3ff;
+  color: white;
+}
+
+/* asistente */
+
+.asistente {
+  align-self: flex-start;
+  background: white;
+  border: 1px solid #d6dce5;
+  line-height: 1.4;
+}
+
+/* escribiendo */
+
+.escribiendo {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* footer */
+
+footer {
+  background: white;
+  border-top: 1px solid #d6dce5;
+  padding: 16px;
+}
+
+/* formulario */
+
+footer form {
+  display: flex;
+  gap: 10px;
+}
+
+/* input */
+
+footer input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+}
+
+footer input:focus {
+  outline: none;
+  border-color: #4da3ff;
+  box-shadow: 0 0 5px rgba(77, 163, 255, 0.5);
+}
+
+/* botón enviar */
+
+footer button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: inherit;
+}
+
+footer button:hover {
+  background: #1d4ed8;
+}
+
+/* animación para puntos */
+
+.puntos {
+  letter-spacing: 3px;
+  animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
