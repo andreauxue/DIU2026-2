@@ -1,0 +1,43 @@
+Para esta practica el uso de la Ia. Fue para la compilación y con la parte de node_modules
+
+De prompt tuve git status
+On branch tarea-02-js-poo
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../../Tarea02/ia_documentacion.txt
+        deleted:    ../../Tarea02/index.html
+        deleted:    ../../Tarea02/script.js
+        deleted:    ../../Tarea02/styles.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Y aunque cambie de carpeta me seguía marcando error y me dijo que mientras en en el .gitignore esta esto # Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw? 
+
+No se Subiría la carpeta 
