@@ -1,0 +1,21 @@
+
+Prompts utilizados:
+
+Ayudame con estos errores de JSX y CSS en React.
+Ayuda para configurar Vite y ejecutar el proyecto localmente.
+Apoyo para estructurar el proyecto con componentes y props.
+
+Resultados obtenidos:
+
+Creación de componentes React para Header, Sidebar
+Implementación de useState para manejar mensajes, input y estado de escritura.
+Configuración correcta del proyecto usando Vite y React.
+Corrección de errores de CSS y JSX.
+
+Cambios realizados:
+
+Se recibió ayuda para desarrollar el componente Sidebar.
+Se recibió ayuda para desarrollar el componente Header.
+Se recibió ayuda para corregir y mejorar algunas secciones de App.css.
+Se realizaron modificaciones propias al diseño visual y estructura del proyecto.
+Se adaptó el código original en HTML/CSS/JavaScript a una arquitectura basada en componentes React.
