@@ -2,9 +2,10 @@ import Chat from "./components/Chat"
 
 function App() {
   return (
-    <div className="app">
+    <main className="min-h-screen bg-slate-100 flex justify-center items-center p-6">
+
       <Chat />
-    </div>
+    </main>
   )
 }
 
