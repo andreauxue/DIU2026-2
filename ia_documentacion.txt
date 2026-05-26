@@ -1,0 +1,342 @@
+Distrito-6: Documentación IA
+
+IA: [nombre y versión]
+
+Prompt:
+
+Resultados obtenidos:
+
+Cambios realizados:
+
+Errores corregidos por el equipo:
+
+=======================================================
+Distrito-6: Documentación IA
+=======================================================
+ 
+IA: Claude Opus 4.7 (Anthropic)
+ 
+ 
+-------------------------------------------------------
+PROMPT
+-------------------------------------------------------
+
+1. Arreglar el componente MessageList para que tenga
+   estado vacío con bienvenida y scroll vertical.
+
+2. Mi input desaparecio despues de arreglar el MessageList,
+   dime por qué y como puedo arreglarlo. 
+ 
+3. Ajustar la UX general: hacer que las sugerencias se vean
+   también cuando no hay ninguna conversación.
+
+
+ 
+-------------------------------------------------------
+RESULTADOS OBTENIDOS
+-------------------------------------------------------
+ 
+* MessageList.jsx
+  - ¿Chat sin mensajes -> welcome screen con avatar
+    grande, saludo "Bienvenido a WALL-UI / Estoy para
+    apoyarte" y chips de sugerencia iniciales.
+  - Scroll vertical propio (overflow-y-auto) 
+ 
+
+* El MessageList ya está completo y es correcto, pero
+  el problema está en la App.jsx
+  - Cambiar linea en App.jsx
+ 
+* Funcionalidades adicionales
+  - Sugerencias estables (fallbackSuggestions con useState)
+    para el estado en el que no hay ningún chat.
+ 
+ 
+-------------------------------------------------------
+CAMBIOS REALIZADOS
+-------------------------------------------------------
+ 
+1. Se modificó el archivo src/components/MessageList.jsx.
+
+2. Se modificó src/App.jsx para:
+     - Importar y renderizar los nuevos componentes.
+     - Inicializar los chats con messages: [] para que la
+       welcome screen aparezca correctamente.
+     - Mantener el ChatInput siempre visible (se eliminó el
+       render condicional dependiente de activeChatId).
+     - Agregar fallbackSuggestions estables para el estado
+       sin chats.
+
+=======================================================
+ 
+IA: Gemini (Google)
+ 
+-------------------------------------------------------
+PROMPT
+-------------------------------------------------------
+
+1. Añadir animaciones fluidas y "ad hoc" a los botones 
+   ya construidos de la barra lateral (Sidebar) sin 
+   romper la estructura de Tailwind.
+2. Implementar un efecto de aparición al pasar el mouse 
+   (hover) para el botón de borrar chats en la lista.
+
+-------------------------------------------------------
+RESULTADOS OBTENIDOS
+-------------------------------------------------------
+
+* Animaciones en Sidebar.jsx
+  - Efectos de escalado suave en botones principales al 
+    hacer hover y clic activo (clases `hover:scale-105`, 
+    `active:scale-95`).
+  - Transiciones fluidas en cambios de color de fondo usando 
+    `transition-all duration-300`.
+  - Botón de borrado de chat con efecto de aparición sutil 
+    (`opacity-0` a `group-hover:opacity-100`) y rotación 
+    ligeramente interactiva (`hover:rotate-12`).
+
+-------------------------------------------------------
+CAMBIOS REALIZADOS
+-------------------------------------------------------
+
+1. Se modificaron los botones dentro de src/components/Sidebar.jsx 
+   para integrar las clases de utilidades de animación de Tailwind CSS.
+2. Se configuró la estructura del contenedor de los chats recientes 
+   añadiendo la clase `group` al div padre para condicionar la 
+   visibilidad animada del ícono de la papelera en los hijos.
+ 
+ 
+-------------------------------------------------------
+ERRORES CORREGIDOS POR EL EQUIPO
+-------------------------------------------------------
+ 
+1. Render condicional del ChatInput.
+   La IA propuso chatInput={activeChatId ? <ChatInput/> : null},
+   lo que ocultaba el campo de texto al borrar todos los chats
+   y dejaba al usuario sin forma de empezar una conversación.
+   El equipo identificó la mala UX y se eliminó la condición
+   para que el input quede siempre visible.
+ 
+2. Welcome screen no se mostraba.
+   La IA implementó el estado vacío con avatar y bienvenida,
+   pero los chats nacían siempre con un mensaje inicial del bot
+   (tanto en el estado inicial como en handleNewChat). Esto
+   hacía que messages.length nunca llegara a 0 y la welcome
+   screen quedara como código muerto. El equipo detectó el
+   problema y se vaciaron ambos arreglos messages para que el
+   estado vacío se active correctamente.
+
+3. Conflictos de Git (Merge Conflict).
+   Al hacer "git pull" para integrar estas animaciones con el 
+   trabajo del resto del equipo en App.jsx, se generaron conflictos 
+   de fusión. El equipo los resolvió en VS Code priorizando 
+   los cambios locales (Accept Incoming Change) para no perder 
+   las clases de animación recién implementadas ni la configuración.
+ 
+=======================================================
+
+IA: Claude Sonnet 4.6 (Anthropic)
+
+-------------------------------------------------------
+PROMPT
+-------------------------------------------------------
+
+I have a sidebar that has small gap between when put together
+with the main content. Please help me remove this space.
+Ill attach the sidebar and the main content file.
+Tell me if you need to see another file.
+
+[Se adjuntó el codigo]
+
+-------------------------------------------------------
+RESULTADOS OBTENIDOS
+-------------------------------------------------------
+
+The gap is coming from border-r border-black/10 on the
+<aside>. Remove it — the sidebar already has its own shadow,
+so the border creates a visible gap/line between them.
+
+    <aside className="w-72 h-full flex-shrink-0 z-10 shadow-xl">
+    </aside>
+
+-------------------------------------------------------
+CAMBIOS REALIZADOS
+-------------------------------------------------------
+
+Se reemplazó:
+
+    <aside className="w-72 h-full flex-shrink-0 border-r
+    border-black/10 z-10 shadow-xl">
+        {sidebar}
+    </aside>
+
+por:
+
+    <aside className="w-72 h-full flex-shrink-0 z-10 shadow-xl">
+    </aside>
+
+Este cambio eliminó el espacio en blanco que se presentaba.
+
+-------------------------------------------------------
+ERRORES CORREGIDOS POR EL EQUIPO
+-------------------------------------------------------
+
+No se aplicaron correcciones, ya que el cambio fue directo.
+
+
+-------------------------------------------------------
+PROMPT
+-------------------------------------------------------
+
+Right now the sidebar messages show a message icon that get
+highlighted. Please help me implement the svg version of
+planets so we can replace the message icons with the planets,
+you can use this as inspo: [Se adjunto una imagen del mockup].
+
+-------------------------------------------------------
+RESULTADOS OBTENIDOS
+-------------------------------------------------------
+
+Each chat cycles through 5 planet types — Saturn with a ring,
+Jupiter with stripes, a planet with a moon, a rocky cracked
+planet, and an ice planet with bands. On hover they do a
+subtle rotate-12 scale-110 spin. When active, the planet
+colors shift to match the brown #A17B58 active state.
+
+-------------------------------------------------------
+CAMBIOS REALIZADOS
+-------------------------------------------------------
+
+Se agregaron los planetas SVG al sidebar, donde cada chat
+cicla entre 5 tipos de planetas con animaciones en hover
+y cambios de color en estado activo.
+
+-------------------------------------------------------
+ERRORES CORREGIDOS POR EL EQUIPO
+-------------------------------------------------------
+
+Solo se utilizó la parte de los planetas (svg) y se descartó
+el resto del sidebar ya que la ia respondió con otra versión
+del sidebar. Por lo que se realizó la integración de los svg
+con la versión actual del sidebar mostrado previamente.
+
+
+-------------------------------------------------------
+PROMPT
+-------------------------------------------------------
+
+The chat input has some invisible space, so the messages stop
+way above the input. And when resizing to smaller windows,
+both the input and sidebar remain the same size, making the
+chat content disappear. Please provide me with a fix for each
+of the issues. I have attached the chat layout.
+
+[Se adjuntó el codigo]
+
+-------------------------------------------------------
+RESULTADOS OBTENIDOS
+-------------------------------------------------------
+
+Two issues to fix:
+
+1. Invisible space above input — the ChatInput footer has
+   pt-7.5 pushing content up, and ChatLayout wraps it in
+   another p-6 footer. Remove the padding from ChatLayout's
+   footer and let ChatInput control its own spacing.
+
+2. Responsive sizing — the sidebar is a fixed w-72 with no
+   responsive breakpoint, and the input doesn't shrink. Add
+   a collapsible sidebar on small screens.
+
+-------------------------------------------------------
+CAMBIOS REALIZADOS
+-------------------------------------------------------
+
+Se aplicaron los cambios mencionados por la ia, agregando
+sm:nn y eliminando el doble espaciado que se tenía.
+
+-------------------------------------------------------
+ERRORES CORREGIDOS POR EL EQUIPO
+-------------------------------------------------------
+
+Se ajustaron valores del footer como: pb-4 px-0.
+
+
+-------------------------------------------------------
+PROMPT
+-------------------------------------------------------
+
+Can you help me add/modify the jsx so it renders correctly
+the plant icon at the send button, currently I am rendering
+an image but the quality drops. Change it to svg.
+The send button is a plant, but should only be available
+if theres an input written.
+
+[Se adjuntó el codigo]
+
+-------------------------------------------------------
+RESULTADOS OBTENIDOS
+-------------------------------------------------------
+
+Plant send button — the icon is drawn as an inline SVG
+(stem, two leaves, sprout tip, and three ground dots). It
+starts grayed out and disabled. As soon as you type anything
+it animates in with a green gradient and becomes active.
+Clears the input on send (Enter or click).
+
+-------------------------------------------------------
+CAMBIOS REALIZADOS
+-------------------------------------------------------
+
+Se agregó la versión propuesta por la ia, en donde se dibuja
+utilizando svg. Previamente se tenía un botón que no mostraba
+de forma correcta una imagen, por lo que la adición del svg
+mejoró visualmente la aplicación.
+
+-------------------------------------------------------
+ERRORES CORREGIDOS POR EL EQUIPO
+-------------------------------------------------------
+
+Se eliminaron ciertas adiciones que realizó la ia como los
+emojis en opciones y ciertos colores en las transiciones.
+Sin embargo, la lógica original no cambió drásticamente.
+
+
+-------------------------------------------------------
+PROMPT
+-------------------------------------------------------
+
+Im getting the following error after tweaking some of the
+tailwind files:
+
+    [vite:css][postcss] @import must precede all other
+    statements (besides @charset or empty @layer)
+    522 |    }
+    523 |  }
+    524 |  @import url('https://fonts.googleapis.com/...');
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+¿How do I fix it?
+
+-------------------------------------------------------
+RESULTADOS OBTENIDOS
+-------------------------------------------------------
+
+That error is coming from the <style> block inside
+ChatInput.jsx — the Google Fonts @import is conflicting
+with Tailwind's processing. The clean fix is to put the
+Google Fonts import in your index.html instead, which
+bypasses PostCSS entirely.
+
+-------------------------------------------------------
+CAMBIOS REALIZADOS
+-------------------------------------------------------
+
+Se eliminó el import de las fonts que estaba en ChatInput,
+eso solucionó el problema.
+
+-------------------------------------------------------
+ERRORES CORREGIDOS POR EL EQUIPO
+-------------------------------------------------------
+
+N/A
