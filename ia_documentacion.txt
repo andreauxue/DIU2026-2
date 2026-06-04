@@ -1,10 +1,13 @@
 Documentación de uso de IA
 
-PROMPT UTILIZADO
-Ayúdame a crear una interfaz básica de chat usando HTML y CSS.
+Prompt utilizado:
+Ayudame a implementar funciones de un chat en JavaScript, me falta el envio de mensaje y la simulación de “está escribiendo” y documenta mi código.
 
-RESULTADO GENERADO
-Se obtuvo un ejemplo de estructura HTML y estilos CSS para organizar la interfaz, del cual tomé una base.
+Código generado:
+Se proporcionó ayuda en funciones relacionadas con el envío de mensajes y el indicador de escritura.
 
-CAMBIOS REALIZADOS
-Implementé los requisitos necesarios para esta práctica y modifiqué el estilo a mi gusto.
+Cambios realizados:
+Se adaptó el código agregando datos personalizados (universo y diseño de interfaces) y un mensaje de bienvenida.
+
+Problemas encontrados:
+Se realizaron ajustes en la lógica del envío de mensajes para integrar correctamente las respuestas.
