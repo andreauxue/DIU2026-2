@@ -1,0 +1,61 @@
+body{
+    background-color: #1a1a1a; 
+    color: #00ff41;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding-top: 50px;
+
+}
+input {
+    padding: 10px;
+    border-radius: 2px; 
+    border: 2px solid #33ff33;
+    background: #000;
+    color: white; 
+    width: 300px; /* para hacer mas grande la caja*/
+    font-family: 'Courier New', Courier, monospace;
+}
+button {
+    padding: 10px 20px;
+    background-color: #33ff33;
+    color: #000; 
+    border: none; 
+    border-radius: 2px; 
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+button:hover{
+    background-color: #00cc33;
+}
+
+.contenedor-input { /*Este contenedor es para tener el input y el boton en orden de fila y que no se separen jeje*/
+    display: flex;       /* Activa el modo alineación */
+    flex-direction: row; /* Los pone en fila (uno al lado del otro) */
+    gap: 10px;           /* Les da un respiro de 10px de separación */
+}
+
+.btn-borrar {
+    background-color: #ff4d4d; /* Rojo de peligro ;P*/
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 2px 8px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+.btn-borrar:hover {
+    background-color: #f76c6c;
+}
+.completado {
+    text-decoration: line-through;
+    color: #555; 
+    opacity: 0.5;
+}

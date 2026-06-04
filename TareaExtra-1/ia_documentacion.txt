@@ -1,0 +1,19 @@
+Angel Jose Carreon (jose es mi apellido jsjs) 
+numero de cuenta: 319240391
+
+OBJETIVO DE LA CONSULTA:
+Comprender de mejor manera el como manipular el DOM usando los métodos que se especificaron en la tarea (createElement, appendChild) en lugar de abusar de innerHTML, y entender por qué mi código se detenía al intentar crear botones dinamicos xd
+
+PROMPT UTILIZADO:
+1. "Estos son los requisitos de mi ayudante: usar addEventListener, createElement, appendChild, classList... no abusar de innerHTML. Solo sé lo básico, ¿cómo empiezo la lógica paso a paso?"
+2. "Tengo un problema, no se ve el botón de eliminar y la entrada no se borra. qué estoy haciendo mal?"
+3. "A qué se refiere mi ayudante con no abusar de innerHTML?"
+
+RESULTADO GENERADO:
+La IA me explicó la diferencia de seguridad y rendimiento entre innerHTML y la creación de nodos. También me ayudó a identificar un error de referencia donde mis variables no coincidían xd, lo que rompía el script y por último, me sugirió el uso de `e.target` para evitar que el evento de tachar la tarea se activara al intentar borrarla.
+
+MODIFICACIONES REALIZADAS:
+Tomé la estructura base de los eventos y lo adapté a mi propio código. Bauticé mis propias variables (nuevaBatalla, aceptarBatalla, quitarBatalla) e implementé la logica del contador por mi cuenta usando let :D y ajusté los estilos CSS a un tema oscuro/terminal que me gustaba (estilo matrix), también me corrigió la ubicación del HTML (tenía cosas en el head que no debía jeje)
+
+ANÁLISIS CRÍTICO:
+Utilizar la IA como "tutor" me ayudó a superar la parálisis por no recordar la sintaxis de JavaScript :( y aprendí que innerHTML puede causar problemas de seguridad y rendimiento al redibujar todo el DOM. También comprendí mejor cómo los eventos de los elementos "hijos" (como el botón) interactúan con los "padres" (como la lista)
