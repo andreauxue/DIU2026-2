@@ -1,0 +1,7 @@
+Quería que el botón de "limpiar chat", cuando lo añadí como enviar se duplicaba.
+Pregunte como ponerlo adecuadamente y al primer mensaje no me entendió y lo podía como mensaje.
+
+Cree cuna imagen de como quería que quedara, era algo así, pero con la barra de enviar mensajes 
+escribe tu mensaje ...	 / enviar / limpiar chat 
+
+solo en el syles.css agregar la información del botón 
