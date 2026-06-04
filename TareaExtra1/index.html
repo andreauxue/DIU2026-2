@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TareaExtra1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Lista de Tareas</h1>
+    <form action="">
+      <label for="nueva-tarea">Nueva tarea:</label>
+      <input
+        type="text"
+        id="nueva-tarea"
+        name="nueva-tarea"
+        required
+        placeholder="Cocinar huevos..."
+      />
+      <button type="button" id="agregar-tarea">Agregar</button>
+    </form>
+    <div>Tareas totales: <span id="contador">0</span></div>
+
+    <ul id="lista-tareas"></ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>
