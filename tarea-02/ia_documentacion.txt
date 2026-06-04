@@ -1,0 +1,82 @@
+===================================================
+DOCUMENTACIÓN DE USO DE IA - TAREA 2
+Sistema de Chat con JavaScript y POO
+Laboratorio de Diseño de Interfaces de Usuario
+===================================================
+
+PROMPTS UTILIZADOS:
+-------------------
+
+1. "que se tiene que cambiar en mi codigo html si quiero realizar un archivo script.js, mi practica primero fue usar solo html y css, pero ahora usaremos js para no manipular directamente html"
+
+2. "pero tengo una duda, si quiero que el boton de enviar mensaje pues mande el mensaje del lado del usuario, tengo que tambien agregarlo como const?"
+
+3. "que otras funciones se ocupan? yo opino que se ocuparia una que haga que se vean los mensajes pero no se como se hace"
+
+4. "si decido dejarlo asi [codigo] es valido?"
+
+5. "mira estos son mis requerimientos, creo que me faltan algunos (adjunte mis requisitos de la tarea)"
+
+6. "Con eso cumple los requisitos?"
+
+7. "pero si quiero que responda al menos a unos tres mensajes?" (este ya no lo pude hacer porque me quedo poco tiempo pero espero en la siguiente con react ya poder implementarlo :3)
+
+CÓDIGO GENERADO:
+----------------
+La IA ayudó a generar y explicar las siguientes partes:
+
+- Cómo conectar el script.js al HTML con la etiqueta <script> y por qué va al final del body y no en el head
+
+- Por qué usar el evento 'submit' en el formulario en lugar de un 'click' en el botón, ya que el submit también detecta Enter
+
+- La función agregarMensaje() con createElement, classList y appendChild para agregar mensajes al DOM
+
+- La línea chat.scrollTop = chat.scrollHeight para el scroll automático y por qué se necesita overflow-y en el CSS
+
+- Clase Mensaje con propiedades tipo, texto, hora y método render()
+
+- Clase Chat con métodos agregarMensaje(), limpiarConversacion() y contarMensajes()
+
+- Función render() global que limpia el área y reconstruye desde el arreglo de estado
+
+- Función mostrarIndicador() para mostrar u ocultar el indicador "Escribiendo..."
+
+- Función respuestaAsistente() con setTimeout para simular el delay de respuesta
+
+- Estructura HTML corregida con un solo nav, el botón limpiar y el contador dentro de él
+
+- Estilos CSS para el botón limpiar y el contador en el sidebar
+
+CAMBIOS REALIZADOS:
+-------------------
+- Se corrigió getElementById('.chat') por querySelector('.chat') ya que .chat es una clase y no un id
+
+- Se corrigió el typo 'summit' por 'submit' en addEventListener, ese error hacia que el botón no funcionara
+
+- Se cambió createElement('li') por createElement('div') para que coincidiera con las clases del CSS existente
+
+- Se eliminó código duplicado que tenía dos addEventListener haciendo lo mismo
+
+- Se adaptaron los nombres de variables al estilo del alumno usando nombres en español como formulario, inputMensaje
+
+- Se corrigió el HTML que tenía dos etiquetas <nav> duplicadas,el botón limpiar y contador se movieron al nav correcto
+
+- Se dejó la respuesta del asistente como mensaje fijo ya que no se implementaron respuestas personalizadas por palabras clave
+
+
+PROBLEMAS ENCONTRADOS:
+----------------------
+- El chat no aparecía porque getElementById no acepta punto,
+  ese es exclusivo de querySelector para buscar por clase
+
+- El formulario no respondía por el typo 'summit' en lugar de 'submit', un error de escritura que es difícil de ver xd
+
+- Los mensajes no tenían el estilo del CSS porque se usaba la clase 'mensaje-item' que no existía, las clases correctas eran 'mensaje' y 'usuario' que sí estaban definidas
+
+- El HTML tenía dos etiquetas nav lo que causaba que el botón limpiar y el contador no estuvieran en el lugar correcto
+
+- La función limpiarInput() usaba una variable 'input' que no estaba definida, la constante correcta era 'mensaje' xd 
+
+- Al principio render() y el listener hacían lo mismo por separado, se unificó para seguir el flujo estado → render → interfaz
+
+===================================================

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Este es para decirle al navegador que la página está en español, es util para los que tienen discapacidades visuales al usar el modo de audio, asi el navegador sabe que es español y da por ejemplo la voz de narración -->
+<head>
+    <meta charset="UTF-8"> <!-- Como decian en la clase, sin esto, acentos o así cambiaran si no lo usamos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistent</title> 
+    <link rel="stylesheet" href="styles.css"> <!-- conectamos con el css -->
+
+</head>
+<body>
+    <header> <!-- cabecera de la página -->
+        <h1>DIUI Assistent</h1>
+        <p>Asistente virtual para diseño de interfaces</p>
+    </header>
+    
+      <main>
+        <nav>
+            <ul id="lista-tareas"></ul> <!-- para que se muestren las tareas añadidas -->
+            <button id="btnLimpiar">Limpiar chat</button> <!-- aqui dentro del nav correcto -->
+            <p id="contador">Mensajes: 0</p> <!-- contador de mensajes que se actualiza con el script -->
+        </nav>
+        
+        <section class="chat" id="chat">
+            <div id="indicador" style="display:none;" class="mensaje asistente">
+                Escribiendo...
+            </div>
+        </section>
+    </main>
+    
+    
+    <footer> <!-- Este es para la barra de abajo donde se escribe el mensaje -->
+        <div class="footer-spacer"></div> <!--alinea el formulario con el chat -->
+        <div class="footer-content">
+          <form id="formularioDeMensaje"> <!-- ACa agrupamos el input y el botón de enviar -->
+            <label for="mensaje">Escribe tu mensaje:</label> <!-- en esta parte vincula el texto con el input -->
+            <input type="text" id="mensaje" placeholder="Escribe tu mensaje..." />
+            <button type="submit" aria-label="Enviar mensaje">Enviar</button> <!-- aria-label es para lectores de pantalla -->
+          </form>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
