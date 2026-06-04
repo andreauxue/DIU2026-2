@@ -1,0 +1,24 @@
+Documentación de uso de IA
+
+1. Prompt utilizado
+Se solicitó generar una implementación propia de un sistema de chat con JavaScript y Programación Orientada a Objetos, cumpliendo con los requisitos del PDF de la tarea: clase Mensaje, clase Chat, arreglo de mensajes como fuente de verdad, función global render(), envío de mensajes, respuesta automática, indicador de escritura, contador dinámico y botón para limpiar chat.
+
+2. Código generado
+La IA ayudó a proponer una estructura base para:
+- index.html
+- styles.css
+- script.js
+- ia_documentacion.txt
+
+3. Cambios realizados
+Se revisó la estructura para asegurar que:
+- El estado principal del sistema sea el arreglo de mensajes.
+- La interfaz se reconstruya desde una función global render().
+- La clase Mensaje tenga tipo, texto, hora y método render().
+- La clase Chat administre agregar, limpiar y contar mensajes.
+- La respuesta automática y el indicador de escritura respeten el flujo estado -> render -> interfaz.
+
+4. Problemas encontrados
+- Se tuvo que cuidar que la lógica principal no manipulara el DOM directamente fuera de render().
+- Se ajustó el contador para no contar el indicador de “está escribiendo”.
+- Se verificó que la implementación no fuera una copia literal del ejemplo de clase, sino una versión propia.
