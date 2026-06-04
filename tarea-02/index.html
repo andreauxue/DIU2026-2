@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>DIUI Assistant</h1>
+        <p>Un asistente diseñado para responder preguntas sobre Diseño de Interfaces de Usuario.</p>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Conversaciones</h2>
+            <nav>
+                <ul>
+                    <li>Chat sobre formularios</li>
+                    <li>Chat sobre accesibilidad</li>
+                    <li>Chat sobre UX</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section id="area-mensajes" aria-label="Área de mensajes">
+            <!-- Los mensajes se renderizan aquí -->
+        </section>
+    </main>
+
+    <footer>
+        <form id="formulario-chat" action="#" method="post">
+            <label for="mensaje">Mensaje</label>
+            <input type="text" id="mensaje" name="mensaje" 
+                   placeholder="Escribe tu mensaje..." 
+                   required aria-required="true">
+            <button type="submit" aria-label="Enviar mensaje">
+                Enviar
+            </button>
+            <button type="button" id="limpiar-chat" aria-label="Limpiar chat">
+                Limpiar chat
+            </button>
+        </form>
+        <div id="contador">Mensajes en la conversación: 0</div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
