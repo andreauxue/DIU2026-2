@@ -13,9 +13,9 @@
   --color-text: #f1f1f1;
   --color-border: #d4d4d4;
   --color-border-alt: #605e5c;
-  --color-send: #cc6666;
+  --color-send: #00FF88;
 
-  --radius: 18px;
+  --radius: 14px;
 }
 
 body {
@@ -98,7 +98,7 @@ section {
   padding: 1rem;
 
   overflow-y: auto;
-
+  min-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -140,6 +140,7 @@ form {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   display: flex;
+  /* align-self:flex-end; */
   align-items: center;
   gap: 1rem;
 }
@@ -165,6 +166,29 @@ input:focus {
 }
 
 button {
+  font: inherit;
+  font-size: 0.9rem;
+	padding: 0.5rem;
+  /* border: 1px solid var(--color-border); */
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+	margin-top: auto;
+
+  cursor: pointer;
+
+  transition:
+    babackground-color 0.25s ease,
+    transform 0.08s ease;
+}
+
+button:hover {
+  background-color: var(--color-send);
+  color: var(--color-bg);
+}
+
+#boton-enviar {
   margin-right: 1rem;
   margin-top: 0.2rem;
   border-radius: var(--radius);
@@ -181,10 +205,10 @@ button {
     transform 0.08s ease;
 }
 
-button:hover {
+#boton-enviar:hover {
   color: var(--color-send);
 }
 
-button:active {
+#boton-enviar:active {
   transform: scale(0.95);
 }
