@@ -1,0 +1,194 @@
+# Uso de herramientas de IA
+
+Para el desarrollo de esta tarea se utilizó una herramienta de inteligencia artificial (Chat-GPT) con el objetivo de apoyar en la generación de ideas, resolución de dudas y corrección de errores durante la implementación de la interfaz.
+
+## Prompts utilizados
+
+### Número 1
+
+#### Prompt utilizado:
+
+“Estoy desarrollando un sistema de chat con JavaScript para una materia de Diseño de Interfaces de Usuario. Necesito que el asistente pueda responder de forma básica a preguntas relacionadas con temas como HTML, CSS, JavaScript, etc. Dame ejemplos de frases que podría escribir un usuario y qué respuestas debería dar el asistente, de forma sencilla, clara y generica.”
+
+Texto generado por IA:
+
+Te dejo una lista de preguntas probables + respuestas tipo asistente, con un estilo natural y educativo.
+
+1. Tema: HTML básico
+Pregunta: ¿Qué es HTML?
+Respuesta: "HTML es el lenguaje que se usa para estructurar el contenido de una página web.";
+
+2. Tema: CSS
+Pregunta: ¿Para qué sirve CSS?
+Respuesta: "CSS se utiliza para darle estilo a la página, por ejemplo colores, tamaños, márgenes y distribución.";
+
+3. Tema: JavaScript
+Pregunta: ¿Qué hace JavaScript?
+Respuesta: "JavaScript permite agregar interactividad a la interfaz, como eventos, validaciones y cambios dinámicos.";
+
+4. Tema: Flexbox
+Pregunta: ¿Qué es Flexbox?
+Respuesta: "Flexbox es un sistema de diseño que permite organizar elementos de forma flexible dentro de un contenedor.";
+
+5. Tema: div vs semánticas
+Pregunta: ¿Cuál es la diferencia entre div y header?
+Respuesta: "Un div es un contenedor genérico, mientras que etiquetas como header, main o footer tienen significado semántico.";
+
+#### Cambios realizados por mí:
+
+A partir de las frases sugeridas por la IA, realicé una función dentro de mi sistema basado en clases (Mensaje y Chat), asegurando que la respuesta del asistente se generara automáticamente después de que el usuario envía un mensaje relacionado con ese tema.
+La versión función quedó así:
+
+function respuestaAutomatica(textoUsuario) {
+    const texto = textoUsuario.toLowerCase();
+
+    if (texto.includes("html")) {
+        return "HTML es el lenguaje que se usa para estructurar el contenido de una página web.";
+    }
+
+    if (texto.includes("css")) {
+        return "CSS se utiliza para darle estilo a la página, por ejemplo colores, tamaños, márgenes y distribución.";
+    }
+
+    if (texto.includes("javascript")) {
+        return "JavaScript permite agregar interactividad a la interfaz, como eventos, validaciones y cambios dinámicos.";
+    }
+
+    if (texto.includes("flexbox")) {
+        return "Flexbox ayuda a acomodar elementos dentro de un contenedor de forma flexible y ordenada.";
+    }
+
+    if (texto.includes("div")) {
+        return "Un div es un contenedor genérico, mientras que etiquetas como header, main o footer sí aportan significado semántico.";
+    }
+
+    return "Encantado de ayudarte";
+}
+
+#### Problemas encontrados:
+
+No se encontraron problemas, utilice las frases para poder desarrollar mi función.
+
+
+### Número 2
+
+#### Prompt utilizado: 
+
+“Estoy mejorando una interfaz de chat hecha con HTML, CSS y JavaScript. Ya tengo una función llamada respuestaAutomatica(textoUsuario) que responde de forma específica si el mensaje incluye temas como html, css, javascript, flexbox o div. Sin embargo, cuando el mensaje no coincide con ninguno de esos temas, no quiero que siempre aparezca la misma respuesta genérica. Quiero que en ese caso se tome una respuesta al azar desde un arreglo de respuestas genéricas. Ayúdame a hacerlo de forma sencilla en JavaScript puro, manteniendo mi estructura actual. Tengo las siguiente función”
+
+function respuestaAutomatica(textoUsuario) {
+    const texto = textoUsuario.toLowerCase();
+
+    if (texto.includes("html")) {
+        return "HTML es el lenguaje que se usa para estructurar el contenido de una página web.";
+    }
+
+    if (texto.includes("css")) {
+        return "CSS se utiliza para darle estilo a la página, por ejemplo colores, tamaños, márgenes y distribución.";
+    }
+
+    if (texto.includes("javascript")) {
+        return "JavaScript permite agregar interactividad a la interfaz, como eventos, validaciones y cambios dinámicos.";
+    }
+
+    if (texto.includes("flexbox")) {
+        return "Flexbox ayuda a acomodar elementos dentro de un contenedor de forma flexible y ordenada.";
+    }
+
+    if (texto.includes("div")) {
+        return "Un div es un contenedor genérico, mientras que etiquetas como header, main o footer sí aportan significado semántico.";
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * respuestasGenericas.length);
+    return respuestasGenericas[indiceAleatorio];
+}
+
+#### Código generado por IA:
+
+const respuestasGenericas = [
+    "Interesante 🤔, cuéntame más sobre eso.",
+    "Suena bien. ¿En qué parte te gustaría profundizar?",
+    "Parece que vas por buen camino 🚀",
+    "Esa es una buena pregunta. ¿Qué has intentado hasta ahora?",
+    "Podemos verlo paso a paso si quieres 👀",
+];
+
+function respuestaAutomatica(textoUsuario) {
+    const texto = textoUsuario.toLowerCase();
+
+    if (texto.includes("html")) {
+        return "HTML es el lenguaje que se usa para estructurar el contenido de una página web.";
+    }
+
+    if (texto.includes("css")) {
+        return "CSS se utiliza para darle estilo a la página, por ejemplo colores, tamaños, márgenes y distribución.";
+    }
+
+    if (texto.includes("javascript")) {
+        return "JavaScript permite agregar interactividad a la interfaz, como eventos, validaciones y cambios dinámicos.";
+    }
+
+    if (texto.includes("flexbox")) {
+        return "Flexbox ayuda a acomodar elementos dentro de un contenedor de forma flexible y ordenada.";
+    }
+
+    if (texto.includes("div")) {
+        return "Un div es un contenedor genérico, mientras que etiquetas como header, main o footer sí aportan significado semántico.";
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * respuestasGenericas.length);
+    return respuestasGenericas[indiceAleatorio];
+}
+
+#### Cambios realizados por mí:
+
+Tomé la idea general propuesta por la IA para evitar que siempre se mostrara la misma respuesta genérica cuando el mensaje del usuario no coincidiera con ninguno de los temas específicos contemplados en el chat.
+
+A partir de ello, agregué otras opciones de respuestas genericas para tener más variedad.
+
+La versión final quedó así:
+
+function respuestaAutomatica(textoUsuario) {
+    const texto = textoUsuario.toLowerCase();
+
+    if (texto.includes("html")) {
+        return "HTML es el lenguaje que se usa para estructurar el contenido de una página web.";
+    }
+
+    if (texto.includes("css")) {
+        return "CSS se utiliza para darle estilo a la página, por ejemplo colores, tamaños, márgenes y distribución.";
+    }
+
+    if (texto.includes("javascript")) {
+        return "JavaScript permite agregar interactividad a la interfaz, como eventos, validaciones y cambios dinámicos.";
+    }
+
+    if (texto.includes("flexbox")) {
+        return "Flexbox ayuda a acomodar elementos dentro de un contenedor de forma flexible y ordenada.";
+    }
+
+    if (texto.includes("div")) {
+        return "Un div es un contenedor genérico, mientras que etiquetas como header, main o footer sí aportan significado semántico.";
+    }
+
+    // Respuesta aleatoria
+    const indiceAleatorio = Math.floor(Math.random() * respuestasGenericas.length);
+    return respuestasGenericas[indiceAleatorio];
+}
+
+const respuestasGenericas = [
+    "Interesante 🤔, cuéntame más sobre eso.",
+    "Suena bien. ¿En qué parte te gustaría profundizar?",
+    "Parece que vas por buen camino 🚀",
+    "Esa es una buena pregunta. ¿Qué has intentado hasta ahora?",
+    "Podemos verlo paso a paso si quieres 👀",
+    "Eso también es importante en DIUI, sigue así 💡",
+    "Buena observación. ¿Quieres un ejemplo práctico?",
+    "Claro, puedo ayudarte con eso. ¿Qué necesitas exactamente?",
+    "Interesante enfoque, vamos a desarrollarlo un poco más.",
+    "Perfecto, dime más detalles y lo resolvemos juntos."
+];
+
+#### Problemas encontrados:
+
+No se detectó ningún problema, la solución era buena y la seugerencia de respuestas aleatorias me gustó.
