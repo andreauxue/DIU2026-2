@@ -1,0 +1,18 @@
+El objetivo de la primera consulta fue que al momento de querer probar mi botón para limpiar no veía que hiciera la función que 
+se solicita en la tarea, ya que a pesar de inspirarme en lo que se hizo en el laboratorio, no lograba que en mi  simulación 
+funcionara. ChatGPT me hizo saber que la lógica no era la que estaba haciendo que no funcionara el botón si no el orden de 
+ejecución, directamente de sus palabras: “El problema por el cual el botón no hace nada se debe al orden de ejecución de tu 
+código. En JavaScript, el orden en que declaras las cosas importa muchísimo, especialmente cuando usas Clases” y procedió a 
+darme una explicación de por qué estaba mal posicionado, finalizando en que el botón funcionara de manera correcta simplemente 
+por posicionar mal esa parte.
+
+La segunda consulta se hizo fue para saber porque a pesar de tener mis mensajes de simulación (los que puse desde la tarea 1 
+en el HTML) en el archivo de JavaScript al momento de cargar el HTML no aparecían dichos mensajes, lo que me explico fue que: 
+“chat.agregarMensaje(…) llama a render(), y el render() tiene la instrucción areaMensajes.innerHTML = "";, JavaScript borra 
+todo lo que escribiste manualmente en el HTML para poner lo que hay en el objeto chat. La solución correcta: No debes escribir 
+los mensajes en el HTML. Debes agregarlos al estado (el arreglo del chat) al iniciar el programa.” Por lo que procedí a poner 
+manualmente mis mensajes (los cuales se encuentran al final del archivo y son exactamente los mismos que ya tenía en el HTML).
+
+Y por último la consulta fue para saber cuál era el método concreto para simular que mi asistente tardara en arrojar las 
+respuestas para simular que está pensando qué decir, por lo que me dio unos ejemplos de cómo se implementa y fue lo que se agregó 
+en la función responderAsistente().
