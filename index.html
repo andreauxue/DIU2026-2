@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src = "script.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,48 +24,19 @@
                 <li>Dudas sobre SQL</li>
                 <li>Dudas sobre Álgebra</li>
             </ul>
+            <div class="chat-controls">
+                <p id="message-counter">Mensajes: 0</p>
+                <button id ="clear-chat-btn">Limpiar Chat</button>
+            </div>
         </nav>
 
-        <section aria-label="ÁreaDeMensajes" class="chat-area">
-            <article class="mensaje usuario">
-                <p>¿Cómo funciona <i>article</i> en HTML?</p>
-            </article>
-            <article class="mensaje asistente"> 
-                <p>
-                    La etiqueta <i>article</i> en HTML se usa para representar contenido independiente 
-                    dentro de una página web. Es decir, un bloque de información que podría entenderse 
-                    por sí solo aunque se saque del resto del sitio.
-                </p>
-            </article>
-            <article class="mensaje usuario">
-                <p>¿Cuál es la diferencia de <i>article</i> con <i>section</i>?</p>
-            </article>
-            <article class="mensaje asistente">
-                <p>
-                    La diferencia entre <i>article</i> y <i>section</i> en HTML es principalmente el 
-                    próposito del contenido. <br>
-                    La etiqueta <i>article</i> se usa para contenido que puede existir por sí solo
-                    y tener sentido fuera de la página. Mientras que la etiqueta <i>section</i> se usa 
-                    para organizar o agrupar contenido relacionado dentro de una página.
-                </p>
-            </article>
-            <article class="mensaje usuario">
-                <p>¿Para qué sirve <i>div</i> y su diferencia con <i>section</i> y <i>article</i>?</p>
-            </article>
-            <article class="mensaje asistente">
-                <p>
-                    La etiqueta <i>div</i> en HTML sirve como contenedor genérico para agrupar elementos 
-                    y poder aplicar estilos o manipularlos.<br>
-                    Si el contenido tiene significado usa <i>section</i> o <i>article</i>, pero si 
-                    solo necesitas agrupar diseño usa <i>div</i>.
-                </p>
-            </article>
+        <section aria-label="ÁreaDeMensajes" class="chat-area" id="chat-area">
         </section>
     </main>
     <footer>
-        <form action="#" method="POST" class="chat-form">
+        <form action="#" method="POST" class="chat-form" id="chat-form">
             <label for="message-input" class="sr-only">Escribe tu mensaje: </label>
-            <input type="text" id="message-input" name="message" placeholder="Escribe tu mensaje..." required>
+            <input type="text" id="message-input" name="message" placeholder="Escribe tu mensaje..." required autocomplete="off">
             <button type="submit" aria-label="Enviar mensaje">Enviar</button>
         </form>
     </footer>
