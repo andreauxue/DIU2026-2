@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  margin-bottom: 20px;
+  color: rgb(107, 106, 106);
+}
+
+.formulario {
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.fila-input {
+  display: flex;
+  gap: 10px;
+}
+
+#inputTarea {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgb(190, 190, 226);
+  border-radius: 8px;
+}
+
+#btnAgregar {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(77, 77, 228);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#btnAgregar:hover {
+  background-color: blue;
+}
+
+.mensaje-error {
+  min-height: 20px;
+  margin-top: 8px;
+  color: gray;
+  font-size: 14px;
+}
+
+.contador {
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.lista-tareas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: white;
+  border: 1px solid rgb(214, 214, 228);
+  border-radius: 10px;
+}
+
+.info-tarea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.texto-tarea {
+  color: black;
+}
+
+.estado-tarea {
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+}
+
+.btn-eliminar {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: rgb(216, 37, 37);
+}
+
+.completada {
+  font-weight: bold;
+}
