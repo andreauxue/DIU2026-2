@@ -134,3 +134,9 @@ footer button {
 footer button:hover {
     background: #27ae60;
 }
+
+#limpiar {
+    margin-top: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
