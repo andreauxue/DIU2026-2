@@ -1,0 +1,13 @@
+Prompt utilizado:
+Pedí ayuda para ajustar los colores de los botones de la interfaz de chat,
+para que el botón de enviar y el de limpiar se vieran en color azul.
+También pedí un ajuste mínimo adicional para mantener la presentación más uniforme.
+
+Resultado generado:
+Se propuso usar un tono azul más notorio en ambos botones,
+además de conservar consistencia visual con el resto de la interfaz.
+
+Cambios realizados:
+Se modificó el estilo de los botones para que ambos quedaran en azul,
+con un efecto hover también en azul más oscuro.
+Además, se añadió este archivo de documentación para explicar el cambio realizado.
