@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DIUI Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="header">
+    <h1 class="title">DIUI Chat</h1>
+    <p class="description">
+        Sistema de chat para practicar diseño de interfaces
+    </p>
+    <p id="contador">Mensajes: 0</p>
+</header>
+
+<main class="layout">
+
+<aside class="sidebar">
+    <h2>Conversaciones</h2>
+    <nav>
+        <ul class="conversation-list">
+            <li class="conversation">Diseño Web</li>
+            <li class="conversation">HTML Básico</li>
+            <li class="conversation">CSS Layout</li>
+            <li class="conversation">Accesibilidad</li>
+        </ul>
+    </nav>
+</aside>
+
+<section class="chat">
+
+    <div class="messages" id="messages"></div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+<form class="form" id="formChat">
+
+    <label for="inputMensaje">Mensaje</label>
+
+    <input
+        class="input"
+        type="text"
+        id="inputMensaje"
+        placeholder="Escribe tu mensaje..."
+    >
+
+    <button
+        class="button"
+        type="submit"
+        aria-label="Enviar mensaje">
+        Enviar
+    </button>
+
+    <button
+        type="button"
+        id="limpiarChat">
+        Limpiar chat
+    </button>
+
+</form>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
