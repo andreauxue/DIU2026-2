@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-app {
+    width: 100%;
+    max-width: 450px;
+    height: 80vh;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h2 { font-size: 1.2rem; }
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contador-ui {
+    font-size: 0.85rem;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+#btn-limpiar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.area-mensajes {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #ece5dd;
+}
+
+.mensaje-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+}
+
+.mensaje-wrapper.usuario {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.mensaje-wrapper.asistente {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.burbuja {
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.usuario .burbuja {
+    background: #3498db;
+    color: white;
+    border-bottom-right-radius: 2px;
+}
+
+.asistente .burbuja {
+    background: white;
+    color: #333;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.hora {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.indicador-escribiendo {
+    font-style: italic;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+#input-mensaje {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+#btn-enviar {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}

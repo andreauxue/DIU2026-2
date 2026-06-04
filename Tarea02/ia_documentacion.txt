@@ -1,0 +1,11 @@
+Prompt utilizado: 
+Hola gemini me ayudas a resolver este ejercicio, debo generar 3 archivos index script y styless para desplegar
+
+Código generado:
+Se generaron las bases completas de index.html, styles.css y script.js implementando las clases Mensaje y Chat requeridas, respetando el flujo de Estado -> Render -> Interfaz sin mutar el DOM fuera de la función de renderizado.
+
+Cambios realizados:
+Realize cambios en el tamaño de las interacciones ademas de ajustar la logica de algunos metodos
+
+Problemas encontrados:
+no se encontro algun problema
