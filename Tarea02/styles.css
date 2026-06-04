@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: rgb(39, 39, 90);
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.chat-card {
+  width: 100%;
+  max-width: 780px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgb(139, 133, 133);
+  padding: 24px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.chat-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.chat-header p {
+  color: gray;
+}
+
+.chat-info {
+  background: white;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.chat-messages {
+  min-height: 360px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid whitesmoke;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.mensaje {
+  max-width: 75%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mensaje.usuario {
+  align-self: flex-end;
+  background: blue;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.mensaje.asistente {
+  align-self: flex-start;
+  background: white;
+  color: black;
+  border-bottom-left-radius: 4px;
+}
+
+.mensaje-texto {
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.mensaje-hora {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.indicador-escritura {
+  align-self: flex-start;
+  background: white;
+  color: blue;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.chat-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+#inputMensaje {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#inputMensaje:focus {
+  outline: none;
+  border-color: blue;
+}
+
+.btn-principal,
+.btn-secundario {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-principal {
+  background: blue;
+  color: white;
+}
+
+.btn-principal:hover {
+  background: blue;
+}
+
+.btn-secundario {
+  background: rgb(234, 6, 6);
+  color: white;
+}
+
+.btn-secundario:hover {
+  background: rgb(181, 20, 20);
+}
+
+.mensaje-error {
+  min-height: 20px;
+  margin-top: 8px;
+  color: rgb(234, 6, 6)d;
+  font-size: 14px;
+}
+
+.estado-vacio {
+  color: gray;
+  text-align: center;
+  margin-top: 40px;
+}

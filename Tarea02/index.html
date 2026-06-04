@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarea 2 - Chat con JavaScript y POO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="chat-card">
+      <header class="chat-header">
+        <div>
+          <h1>DIUI Chat</h1>
+        </div>
+      </header>
+
+      <section class="chat-info">
+        <p>Total de mensajes: <span id="contadorMensajes">0</span></p>
+      </section>
+
+      <section id="areaMensajes" class="chat-messages"></section>
+
+      <form id="formChat" class="chat-form">
+        <label for="inputMensaje">Escribe un mensaje</label>
+        <div class="chat-input-row">
+          <input
+            type="text"
+            id="inputMensaje"
+            placeholder="Escribe tu mensaje..."
+            autocomplete="off"
+          >
+          <button type="submit" class="btn-principal">Enviar</button>
+        </div>
+        <p id="mensajeError" class="mensaje-error"></p>
+      </form>
+      <div>
+        <button id="btnLimpiar" class="btn-secundario" type="button">Limpiar chat</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
