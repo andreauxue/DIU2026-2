@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIUI Assistant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/index.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-top">
+        <div>
+            <h1>DIUI Assistant</h1>
+            <p>Chatbot con IA únicamente para explorar acerca de diseño de interfaces.</p>
+        </div>
+        <!-- contador dinámico de mensajes -->
+        <span id="contador-mensajes" class="contador" aria-live="polite">0 mensajes</span>
+    </div>
+</header>
+
+<main class="layout">
+
+    <div class="chat">
+
+        <!-- render() reconstruye este contenedor completo -->
+        <section
+            id="contenedor-mensajes"
+            class="mensajes"
+            aria-label="Conversación con el asistente"
+            aria-live="polite"
+        ></section>
+
+        <footer class="footer">
+
+            <!-- botón para limpiar chat -->
+            <div class="footer-acciones">
+                <button id="btn-limpiar" class="btn-limpiar" aria-label="Limpiar historial del chat">
+                     Limpiar chat
+                </button>
+            </div>
+
+            <form class="formulario" onsubmit="return false;">
+                <div class="input-area">
+                    <input
+                        type="text"
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Pregunta algo al asistente..."
+                        autocomplete="off"
+                        aria-label="Escribe tu mensaje"
+                    >
+                    <!-- id="btn-enviar" para el listener en script.js -->
+                    <button type="submit" id="btn-enviar" aria-label="Enviar mensaje">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+
+        </footer>
+
+    </div>
+
+    <aside class="sidebar">
+        <nav>
+            <h2>Tus chats</h2>
+            <ul>
+                <li>Diseño de formularios accesibles</li>
+                <li>Paletas de color UI</li>
+                <li>Introducción a CSS y HTML</li>
+                <li>Mejorar diseño</li>
+            </ul>
+        </nav>
+    </aside>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
