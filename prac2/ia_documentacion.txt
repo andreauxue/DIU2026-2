@@ -1,0 +1,22 @@
+DOCUMENTACIÓN DE USO DE IA — Tarea 02
+
+
+1. PROMPT UTILIZADO: 
+" Tengo una css muy básico, pero quiero que lo mejores siguiendo la paleta de colores ya agregada, quiero que le pongas 
+  diseño a las burbujas, y cambies los tipos de letras o fuentes dependiendo de lo más apto para una interfaz,
+2. CÓDIGO GENERADO
+La IA generó:
+  styles.css  — Sistema de diseño completo usando variables CSS. Tema oscuro con acento
+                verde lima (--accent: #c8f55a). Fuentes Syne (display) y DM Mono (monospace).
+
+
+1: Ayudame a optimizar el método render() de Mensaje para que maneje bien caracteres especiales
+2: Agregó cosas a render() para manejar caracteres especiales y recomendó añadir _escaparHTML() dentro de la clase Mensaje para
+sanear el texto antes de insertarlo en el DOM.
+Además sugirió aleatorizar el delay de respuesta del asistente para que se sintiera más natural (en lugar de un valor fijo).
+
+
+1: Quiero que agreges animaciones necesarias para el typing y que uses flexbox
+2: La IA genero codigo para agregar animaciones: msgIn para burbujas, dot para el indicador de typing. Layout con CSS Flexbox. Responsive para móvil.
+
+

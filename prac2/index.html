@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat App — Tarea 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-mark">◈</span>
+        <span class="logo-text">CHAT GPI</span>
+      </div>
+      <div class="sidebar-info">
+        <div class="stat-block">
+          <span class="stat-label">Mensajes</span>
+          <span class="stat-value" id="msg-count">0</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-label">Estado</span>
+          <span class="stat-value online">● En línea</span>
+        </div>
+      </div>
+      <button class="clear-btn" id="clear-btn">
+        <span>Limpiar chat</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+      </button>
+    </aside>
+
+    <!-- Main chat area -->
+    <main class="chat-main">
+      <header class="chat-header">
+        <div class="header-left">
+          <div class="avatar assistant-avatar">
+            <span>GPI</span>
+          </div>
+          <div class="header-info">
+            <h1 class="header-title">Asistente IA</h1>
+            <p class="header-sub">Sistema de chat en tiempo real</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="messages-area" id="messages-area">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="typing-indicator" id="typing-indicator" style="display:none">
+        <div class="typing-avatar">GPI</div>
+        <div class="typing-bubble">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <footer class="input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="user-input"
+            class="message-input"
+            placeholder="Escribe un mensaje..."
+            rows="1"
+          ></textarea>
+          <button class="send-btn" id="send-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
