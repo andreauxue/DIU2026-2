@@ -1,0 +1,14 @@
+Prompts utilizados:
+- "Hola gemini! me ayudas a realizar mi tarea de Diseño de Interfaces de Usuarios... me ayudas a empezar desde 0?"
+- "Vale te mando algunas referencias... gracias por analizarlas ahora pasemos a realizar la tarea"
+- Consultas sobre cómo solucionar errores de npm, comandos de instalación en PowerShell y la inicialización correcta de Vite.
+
+Resultados obtenidos:
+- Se generó la estructura de un proyecto en React utilizando Vite.
+- Se modularizó la interfaz en componentes funcionales (Header, Sidebar, Message, ChatArea, ChatForm).
+- Se adaptó la paleta de colores original (rojinegra) utilizando CSS propio sin librerías externas.
+- Se implementó el manejo del estado con `useState` para controlar el input, el renderizado de la lista de mensajes y el indicador de "está escribiendo...".
+
+Cambios realizados:
+- Se reemplazó la manipulación directa del DOM (que se usaba en la tarea anterior con JS Vanilla) por el renderizado reactivo basado en el estado.
+- Se ajustaron las clases CSS para que coincidieran con la nueva estructura de componentes de React.
