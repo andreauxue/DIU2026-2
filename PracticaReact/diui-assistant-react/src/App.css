@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: white;
+    --color-surface: #080200;
+    --color-primary: #000638;
+    --color-primary-dark: #040F5E;
+    --color-secondary: #383B57;
+    --color-text: #080200;
+    --color-text-light: #9EA4DE;
+
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.178);
+}
+
+body, #root, .app-container {
+    font-family: Impact, Haettenschweiler,
+    'Arial Narrow Bold', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+
+    height: 100vh; /*Ocupamos el alto de la ventana */
+    width: 100vw; /*Ocupamos el ancho de la ventana */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /*Evita scroll en toda la pagnia */
+}
+
+header {
+    background: linear-gradient(135deg, var(--color-primary),
+    var(--color-primary-dark), var(--color-surface));
+
+    padding: 0.2rem 2rem;
+    box-shadow: var(--shadow-soft);
+    flex-shrink: 0; /*Evita que el header se reduzca en altura */
+}
+
+header h1 {
+    color: var(--color-bg);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/*Agregado ya que por defecto el color no se veia */
+#contador-mensajes {
+    color: white;
+    font-size: 0.8rem;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/*Sidebar y Chat */
+.layout {
+  flex: 1; /*Toma el espacio restante entre el header y footer */
+  display: flex;
+  flex-direction: row;
+  overflow: hidden; /*Importante para el scroll sea interno */
+  width: 100%;
+  min-height: 0; /*Permite que el chat ocupe todo el espacio disponible */
+}
+
+aside {
+    width: 250px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /*Mantenemos el ancho */
+    overflow-y: auto; /*Permite scroll solo en el aside */
+    gap: 0.5rem;
+}
+
+/* El nav con flex: 1 empujará lo que esté debajo (Limpiar Chat) hacia el fondo[cite: 6] */
+aside nav {
+    flex: 1; 
+    margin-top: 1rem;
+    overflow-y: auto;
+}
+
+aside h2 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-align: center; 
+}
+
+aside ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+aside li {
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+}
+
+aside li:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.configuracion {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.chat-container{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    background-color: var(--color-text-light); /*Color del fondo del chat */
+    overflow: hidden;
+    min-height: 0;
+}
+
+/*Agregamos el contenedor para que aperezca y no tenga un espcio en blanco*/
+.chat-area-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /*Evita scroll en toda la pagnia */
+}
+
+section { 
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto; /*Permite scroll solo en esta sección */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/*Mensajes usuario y asistente*/
+.usuario {
+    align-self: flex-end;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md) var(--radius-md) var(--radius-sm) var(--radius-md);
+    max-width: 80%;
+}
+
+.asistente {
+    align-self: flex-start;
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md) var(--radius-md) var(--radius-md) var(--radius-sm);
+    max-width: 80%;
+}
+
+footer {
+    background-color: var(--color-surface);
+    color: var(--color-bg);
+    text-align: center;
+    padding: 1rem;
+
+    flex-shrink: 0; /*Evita que el footer se reduzca en altura */
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    background: var(--color-surface);
+}
+
+input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: var(--radius-sm);
+}
+
+button {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+button:active {
+    background-color: var(--color-primary);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    aside {
+        display: none;
+    }
+
+    .mensaje {
+        max-width: 90%;
+    }
+}
