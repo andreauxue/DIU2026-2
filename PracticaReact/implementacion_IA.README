@@ -1,0 +1,23 @@
+Yo: Estoy notando que la barra de input del chat para escribir mensajes esta arriba y conforme se va llenando de mensajes va bajando, en si deberia ser estatico hasta abajo el input
+
+Gemini: ¡Ah, el clásico problema de diseño al pasar a React! Esto pasa muchísimo y tiene una explicación muy sencilla.
+
+En tu proyecto original de Vanilla JS, tu etiqueta <body> era el contenedor principal que tenía tus etiquetas <header>, <main> y <footer> directamente adentro. Como a tu body le pusiste height: 100vh y display: flex, funcionaba perfecto para empujar el footer hacia abajo.
+
+¿Qué pasa ahora en React?
+Vite y React metieron un "intermediario". Ahora tu estructura es así:
+<body>  →  <div id="root">  →  <div className="app-wrapper">  →  Y hasta adentro van tu Header, Main y Footer.
+
+Como el #root y el .app-wrapper no tienen la instrucción de "estirarse" por toda la pantalla, se hacen chiquitos cuando no hay mensajes y van creciendo conforme escribes, jalando el footer con ellos.
+
+La Solución
+Solo tenemos que decirle a esos intermediarios que también se estiren y se comporten como cajas flexibles.
+
+Yo: Revisa mis componentes actuales contra estos requisitos de la práctica  Me falta implementar algo?
+Resultados: Identificación de requisitos técnicos faltantes de la rúbrica (necesidad de desestructurar las props en Message.jsx y de pasar la longitud del arreglo al Header).
+cambios:
+- Reemplazo completo de la manipulación directa del DOM (creación manual de elementos) por la gestión del estado reactivo mediante el hook `useState`.
+- Separación de la interfaz en los 5 componentes requeridos dentro de la carpeta `src/components/`.
+- Corrección en el paso de datos (Props) de `ChatArea.jsx` a `Message.jsx` para que reciba tipo, texto y hora de forma individual.
+- Ajustes en el archivo `App.css` para adaptarlo al árbol de elementos que genera React y mejorar la jerarquía visual del formulario.
+- Modificación de los textos estáticos del renderizado condicional para coincidir exactamente con los solicitados ("DIUI Assistant está escribiendo...").
