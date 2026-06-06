@@ -1,0 +1,72 @@
+ia_documentacion.txt
+
+Práctica React Diseño de Interfaces de Usuario — 2026
+
+1. Prompts utilizados
+
+Prompt 1:
+Le pedí ayuda a ChatGPT para migrar mi chat DIUI Assistant a React usando Vite, JavaScript y CSS normal, sin usar backend, API, Tailwind, Bootstrap ni jQuery.
+
+Resultado:
+Me dio una estructura base para organizar el proyecto en React.
+
+Cambios realizados:
+Creé el proyecto dentro de la carpeta PracticaReact/diui-assistant-react y organicé los archivos principales.
+
+
+Prompt 2:
+Le pedí ayuda para separar el sistema en componentes de React: Header, Sidebar, Message, ChatArea y ChatForm.
+
+Resultado:
+Me explicó cómo dividir la interfaz para que cada componente tuviera una función específica.
+
+Cambios realizados:
+Creé los componentes dentro de la carpeta src/components.
+
+
+Prompt 3:
+Le pedí ayuda para usar useState y manejar el texto del input, los mensajes y el estado de “está escribiendo”.
+
+Resultado:
+Me ayudó a hacer que el chat funcionara cambiando el estado, sin manipular el DOM directamente.
+
+Cambios realizados:
+Agregué useState en App.jsx para controlar el input, la lista de mensajes y el indicador de escritura.
+
+
+Prompt 4:
+Le pedí ayuda para simular respuestas del asistente.
+
+Resultado:
+Me dio una forma sencilla de usar respuestas aleatorias con setTimeout.
+
+Cambios realizados:
+Agregué respuestas simuladas y el mensaje “DIUI Assistant está escribiendo...” antes de mostrar la respuesta.
+
+
+Prompt 5:
+Le pedí ayuda para darle estilo al chat con colores morados.
+
+Resultado:
+Me dio una propuesta de diseño con sidebar, área de mensajes, botones, hover y focus.
+
+Cambios realizados:
+Modifiqué App.css para crear una interfaz diferente a la de clase, usando principalmente tonos morados.
+
+
+2. Resultados obtenidos
+
+El proyecto quedó como un chat hecho en React. Permite escribir mensajes, enviarlos, mostrar una respuesta simulada del asistente, ver cuando el asistente está escribiendo, actualizar el contador de mensajes y limpiar toda la conversación.
+
+También se dividió el sistema en componentes para que el código estuviera más ordenado.
+
+
+3. Cambios realizados
+
+- Se creó el proyecto con Vite y React.
+- Se agregó la carpeta PracticaReact.
+- Se organizaron los componentes en src/components.
+- Se usó useState para manejar el estado del chat.
+- Se agregó una respuesta simulada del asistente.
+- Se diseñó la interfaz con CSS propio y colores morados.
+- Se revisó que node_modules no se subiera al repositorio usando .gitignore.
