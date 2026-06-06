@@ -1,0 +1,156 @@
+===========================================
+DOCUMENTACIÓN DE USO DE IA
+Entrega 2 - Frontend del Chatbot
+Diseño de Interfaces de Usuario
+===========================================
+
+Para esta entrega, se utilizó Gemini como herramienta de apoyo durante el desarrollo del frontend del chatbot. Se utilizó principalmente para agilizar tareas técnicas, resolver errores de interfaz y apoyar en la estructura inicial del proyecto.
+
+-------------------------------------------
+1. Prompts utilizados
+-------------------------------------------
+
+1.1 Estructura inicial de la interfaz
+
+Prompt utilizado:
+"Genera la estructura base de un chatbot en React utilizando componentes reutilizables y Tailwind CSS."
+
+Resultado obtenido:
+La IA generó una propuesta inicial de organización de componentes para dividir la interfaz en:
+- Sidebar
+- Header
+- Área de mensajes
+- Input del chat
+- Indicador de escritura
+
+Cambios realizados:
+El equipo reorganizó la estructura generada para adaptarla a la identidad visual propuesta en la Entrega 1 y ajustar el flujo visual del chatbot.
+
+
+-------------------------------------------
+
+1.2 Corrección del layout general
+
+Prompt utilizado:
+"¿Cómo puedo corregir problemas de layout en React y Tailwind para evitar que los componentes se desborden o rompan la interfaz?"
+
+Resultado obtenido:
+La IA sugirió ajustes utilizando:
+- flex
+- min-h-screen
+- overflow-hidden
+- overflow-y-auto
+- w-full
+- h-screen
+
+Cambios realizados:
+Se modificaron tamaños, espaciados y distribución de componentes para mantener una visualización estable tanto en escritorio como en dispositivos pequeños.
+
+
+-------------------------------------------
+
+1.3 Iconos
+
+Prompt utilizado:
+"Genera iconos simples en React como componentes reutilizables."
+
+Resultado obtenido:
+La IA ayudó a crear componentes JSX para iconos como:
+- enviar mensaje
+- menú
+- ayuda
+- configuración
+- archivos adjuntos
+
+Cambios realizados:
+Se ajustaron tamaños, colores y estilos visuales para mantener consistencia con la identidad gráfica del proyecto.
+
+
+-------------------------------------------
+
+1.4 Respuestas simuladas del chatbot
+
+Prompt utilizado:
+"Genera una función en JavaScript que devuelva respuestas simuladas con más contexto para un chatbot de diseño de interfaces."
+
+Resultado obtenido:
+La IA propuso una función para devolver respuestas predeterminadas relacionadas con:
+- accesibilidad
+- jerarquía visual
+- formularios
+- experiencia de usuario
+
+Cambios realizados:
+El equipo adaptó las respuestas para que tuvieran un tono más coherente con el asistente diseñado.
+
+
+-------------------------------------------
+
+1.5 Corrección de problemas responsive
+
+Prompt utilizado:
+"¿Cómo puedo evitar que un layout en Tailwind se rompa en pantallas pequeñas?"
+
+Resultado obtenido:
+La IA sugirió utilizar breakpoints responsivos como:
+- sm:
+- md:
+- lg:
+
+También recomendó reorganizar elementos usando:
+- flex-col
+- hidden
+- overflow-auto
+
+Cambios realizados:
+Se ajustó la distribución del sidebar y del área principal del chat para mejorar la experiencia en celular.
+
+
+-------------------------------------------
+
+1.6 Mejora visual del contenedor principal
+
+Prompt utilizado:
+"¿Cómo puedo agregar un borde sutil alrededor de un chatbot en Tailwind CSS para mejorar la separación visual?"
+
+Resultado obtenido:
+La IA sugirió utilizar:
+- border
+- border-gray
+- rounded-xl
+- shadow
+
+Cambios realizados:
+El equipo implementó un borde gris suave alrededor del chatbot para mejorar la percepción visual y separar la interfaz del fondo.
+
+-------------------------------------------
+
+1.7 Implementación del menú hamburguesa
+
+Prompt utilizado:
+"¿Cómo puedo implementar un menú hamburguesa responsive en React y Tailwind CSS para ocultar el sidebar en pantallas pequeñas?"
+
+Resultado obtenido:
+La IA sugirió utilizar:
+- useState para controlar la apertura y cierre del menú
+- breakpoints responsivos de Tailwind
+- transición visual del sidebar
+- icono tipo hamburguesa reutilizable
+
+Cambios realizados:
+El equipo adaptó el comportamiento del menú para mantener la identidad visual del chatbot y mejorar la navegación en dispositivos móviles. También se ajustaron tamaños, espaciados y visibilidad del sidebar para evitar que la interfaz se rompiera en pantallas pequeñas.
+
+-------------------------------------------
+2. Errores corregidos por el equipo
+-------------------------------------------
+
+Durante el desarrollo, se corrigieron problemas detectados después de utilizar las sugerencias generadas por IA.
+tales como:
+
+- Problemas de responsive en pantallas pequeñas.
+- Desbordamiento de componentes.
+- Inconsistencias en tamaños de iconos.
+- Ajustes de espaciado y alineación.
+- Problemas de scroll dentro del área de mensajes.
+- Corrección visual del layout general.
+- Adaptación manual de estilos para mantener la identidad visual propia del proyecto.
