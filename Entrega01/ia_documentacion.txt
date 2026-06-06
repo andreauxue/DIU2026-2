@@ -1,0 +1,65 @@
+DOCUMENTACIÓN DE USO DE IA — DIUI Assistant
+
+Herramienta: Claude (claude.ai — Sonnet 4.6)
+
+1. PROMPTS UTILIZADO
+
+PROMPT 1
+    "Le quiero agregar una pantalla de inicio y una pantalla
+    principal del chat a mi página, ¿cómo serían?" *se adjuntan 
+    fotos del diseño del chat (estado con mensajes)*
+    
+-----------------------------------------------------
+2. RESULTADOS OBTENIDOS
+-----------------------------------------------------
+
+La IA generó mockups en HTML para cada vista, usando la paleta 
+del proyecto:
+    #223125 (verde oscuro) · #729969 (verde medio)
+    #A1C0C2 (azul grisáceo) · #E6E7EB (gris claro)
+    #F6F6F6 (blanco roto)
+
+RESULTADO — Pantalla de inicio
+Fondo oscuro (#223125), layout centrado. Propuso:
+    - Nav superior con logo "DIUI" y etiqueta de versión
+    - Ícono cuadrado redondeado con círculo interior
+    - Título "DIUI Assistant" y descripción de la app
+    - Chips de temas: Tipografía, Color & contraste,
+      Accesibilidad, Layout, Componentes
+    - Botón CTA "Comenzar ->" en fondo #729969
+    - Footer con nota sobre el alcance del asistente
+
+RESULTADO - Pantalla principal del chat
+   Layout completo con sidebar + área central + footer.
+   La IA explicó que esta vista es el "estado neutro":
+   no es estado vacío (0 mensajes) ni estado con mensajes
+   (burbujas del usuario). Propuso mostrar una bienvenida
+   del asistente con chips de preguntas sugeridas.
+
+-----------------------------------------------------
+3. CAMBIOS REALIZADOS
+-----------------------------------------------------
+
+Los mockups de la IA se usaron como referencia visual.
+La implementación final difiere en varios puntos:
+
+PANTALLA DE INICIO
+  - Se mantuvo el fondo oscuro (#223125), la estructura
+    centrada, los chips de temas y el botón "Comenzar ->".
+  - Cambio: la etiqueta superior pasó de "2025" a
+    "Diseño de interfaces — 2026".
+  - Cambio: nav simplificado; logo "DIUI" a la izquierda
+    y la etiqueta del curso a la derecha.
+
+PANTALLA PRINCIPAL DEL CHAT
+  - Se adoptó la bienvenida central con ícono, saludo
+    "¡Hola! Soy DIUIA" y chips de preguntas sugeridas.
+  - Cambio: el sidebar se colocó a la derecha (el mockup
+    lo tenía a la izquierda), mostrando "Sin chats que
+    mostrar" por ser un chat nuevo.
+  - Cambio: se agregó el botón "Nuevo chat" en el header
+    (esquina superior derecha), ausente en el mockup.
+  - Cambio: se eliminó el contador de mensajes del header.
+  - Cambio: los chips de sugerencias se redujeron a dos:
+    "¿Qué fuente uso en un dashboard?" y
+    "¿Cuándo usar cards vs listas?"
