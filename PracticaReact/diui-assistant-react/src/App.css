@@ -1,0 +1,206 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #fdf6ee;
+  color: #3d1f0a;
+  min-height: 100vh;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER */
+
+.site-header{
+  background-color: #c0522a;
+  color: white;
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h1{
+  margin: 0;
+}
+
+.site-header p{
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.message-counter{
+  background-color: rgba(255,255,255,0.2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* LAYOUT */
+
+.main-layout{
+  display: flex;
+  height: calc(100vh - 140px);
+}
+
+/* SIDEBAR */
+
+.sidebar{
+  width: 230px;
+  background-color: #f5e6d3;
+  border-right: 1px solid #e0c4a8;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h2{
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.conversation-list li{
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.conversation-list li:hover{
+  background-color: #edd3bc;
+}
+
+.conversation-list li.active{
+  background-color: #f0d0b0;
+  font-weight: bold;
+}
+
+/* CHAT */
+
+.chat-panel{
+  flex: 1;
+  background-color: #fffaf4;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+}
+
+.chat-messages{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* MENSAJES */
+
+.message{
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message--user{
+  align-self: flex-end;
+}
+
+.message--assistant{
+  align-self: flex-start;
+}
+
+.message-time{
+  font-size: 0.7rem;
+  margin-bottom: 4px;
+}
+
+.message-bubble{
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+/* MENSAJE USUARIO */
+
+.message--user .message-bubble{
+  background-color: #ffe0c2;
+  border: 1px solid #e07840;
+}
+
+/* MENSAJE ASISTENTE */
+
+.message--assistant .message-bubble{
+  background-color: #fff3e6;
+  border: 1px solid #c0522a;
+}
+
+/* FOOTER */
+
+.site-footer{
+  background-color: #f0d9c0;
+  padding: 12px;
+}
+
+.message-form{
+  display: flex;
+  gap: 10px;
+}
+
+.message-input{
+  flex: 1;
+
+  padding: 10px;
+
+  border-radius: 8px;
+  border: 1px solid #d9a57c;
+
+  font-size: 1rem;
+}
+
+.message-input:focus{
+  outline: none;
+  border-color: #c0522a;
+}
+
+/* BOTONES */
+
+.send-btn,
+.clear-btn{
+  padding: 10px 14px;
+
+  background-color: #c0522a;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.send-btn:hover,
+.clear-btn:hover{
+  opacity: 0.9;
+}
+
+/* TYPING */
+
+.typing-indicator{
+  font-style: italic;
+  color: #8d5b39;
+  font-size: 0.85rem;
+}
