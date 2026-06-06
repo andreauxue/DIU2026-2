@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-fluxy-gradient {
+    background: linear-gradient(to right, #9234C9, #1D2687, #D814BE);
+  }
+  .text-fluxy-gradient {
+    background: linear-gradient(to right, #9234C9, #1D2687, #D814BE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .border-fluxy-gradient {
+    border-image: linear-gradient(to right, #9234C9, #1D2687, #D814BE) 1;
+  }
+}

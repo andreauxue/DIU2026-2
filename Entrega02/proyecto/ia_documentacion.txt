@@ -1,0 +1,30 @@
+
+
+Para esta segunda fase del proyecto, el uso de la IA 
+
+1. Prompts utilizados y Consultas Clave:
+
+- "Tengo un error de dependencias con PostCSS y npx tailwindcss init en mi terminal de Windows, ¿cómo puedo generar la configuración manualmente?"
+- "Necesito estructurar mi proyecto React con los siguientes componentes oficiales: Sidebar, ChatLayout, ChatHeader, MessageList, MessageBubble, ChatInput, SuggestionChip y TypingIndicator."
+- "Quiero que el nombre 'Fluxy' use exclusivamente la tipografía Hind con un degradado lineal exacto de tres colores (#9234C9, #1D2687, #D814BE) y el resto del texto sea Montserrat en color negro sólido."
+- "Modifica la lógica del chat para que no dependa de un backend real, sino que simule el flujo humano usando setTimeout de 1.5 segundos e intercale cíclicamente las 5 respuestas predeterminadas de Fluxy aprobadas en la Entrega 1."
+- "Añade una probabilidad aleatoria del 20% para que el sistema arroje un 'Estado de Error de Conexión del Sistema' en color rojo y un 80% para respuestas exitosas, cumpliendo con la evaluación de casos de errores reales de la rúbrica."
+
+2. Resultados Obtenidos:
+
+- Creación y configuración manual y limpia de los archivos 'tailwind.config.js' y 'postcss.config.js' compatibles con Tailwind CSS v4 (@tailwindcss/postcss).
+- Una interfaz 100% responsiva (Mobile-first) donde la barra lateral (Sidebar) se colapsa en dispositivos móviles mediante un botón hamburguesa interactivo.
+- Pantalla de inicio de "Estado Vacío" idéntica al wireframe de Figma, con el nombre de Fluxy gigante en el centro y tres "Suggestion Chips" funcionales que envían preguntas predeterminadas al hacerles clic.
+- Globos de texto estructurados con el borde sólido plano color '#1D2687' y textos en negro puro, resolviendo la retroalimentación de la profesora sobre "limpiar la sobrecarga de colores y mejorar la jerarquía visual".
+
+3. Cambios Realizados y Adaptaciones de Diseño:
+
+- Se sustituyó el diseño genérico de clase por la identidad visual corporativa del equipo, respetando la separación estricta entre colores de marca 
+y colores de estado .
+- Se implementaron microinteracciones explícitas exigidas por la profesora:
+ 
+
+4. Errores corregidos por el equipo durante el desarrollo:
+- Conflicto de versiones de Vite/Tailwind: Se corrigió un error en la terminal donde 'npx tailwindcss init -p'
+ fallaba debido a las nuevas directivas de Tailwind v4. El equipo resolvió el problema instalando '@tailwindcss/postcss' de forma manual y 
+migrando las tres directivas tradicionales de CSS a la nueva regla unificada: `@import "tailwindcss";`.
