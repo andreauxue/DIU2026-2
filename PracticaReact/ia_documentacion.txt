@@ -1,0 +1,94 @@
+Uso de IA — Documentación
+
+Para esta práctica primero adapté el chat que ya había hecho en JavaScript
+a componentes de React. Ya tenía parte de la lógica pensada, pero tuve dudas
+en cómo manejar el estado y separar correctamente los componentes.
+
+La idea siguió siendo un asistente virtual para ayudar con dudas de bicicletas
+y mantenimiento básico.
+
+
+------------------------------------------------
+
+Prompt 1:
+
+"Ya separé el proyecto en componentes pero no sé bien dónde debería guardar
+el estado de los mensajes para que todos los componentes lo usen."
+
+Respuesta:
+
+Se sugirió manejar el estado principal en App.jsx y pasar la información
+a los componentes mediante props.
+
+Cambios realizados:
+
+Se movió el arreglo de mensajes a App.jsx y se pasaron props a Header,
+ChatArea y ChatForm.
+
+
+------------------------------------------------
+
+Prompt 2:
+
+"Quiero que el input sea controlado en React pero me confundo un poco con
+el onChange y useState."
+
+Respuesta:
+
+Se explicó cómo usar useState para guardar el texto del input y actualizarlo
+con onChange.
+
+Cambios realizados:
+
+El formulario ahora usa un input controlado y el texto se limpia después
+de enviar el mensaje.
+
+
+------------------------------------------------
+
+Prompt 3:
+
+"Antes tenía un mensaje de 'Déjame pensar...' pero ahora quiero que salga
+como el indicador de tres puntos escribiendo y luego ese mismo mensaje cambie
+a la respuesta real."
+
+Respuesta:
+
+Se sugirió agregar un mensaje temporal con texto "..." y después actualizar
+ese mismo mensaje usando map() sobre el estado.
+
+Cambios realizados:
+
+El asistente ahora muestra primero el indicador de escritura y después
+el mensaje cambia automáticamente a la respuesta final.
+
+
+------------------------------------------------
+
+Prompt 4:
+
+"Mi chat ya funciona pero cuando se mandan muchos mensajes tengo que bajar
+manual. ¿Cómo hago que el chat baje solo?"
+
+Respuesta:
+
+Se recomendó usar useRef y useEffect para mover automáticamente el scroll
+hasta el último mensaje.
+
+Cambios realizados:
+
+El chat ahora baja automáticamente cada vez que se agrega un mensaje.
+
+
+------------------------------------------------
+
+Problemas encontrados:
+
+Al inicio seguía pensando el proyecto como si fuera JavaScript normal y quería
+modificar cosas directamente como antes.
+
+También tuve problemas entendiendo cómo actualizar mensajes sin modificar
+el DOM manualmente.
+
+Después de mover toda la lógica al estado de React, el comportamiento fue
+más sencillo de mantener y los componentes quedaron más organizados.
